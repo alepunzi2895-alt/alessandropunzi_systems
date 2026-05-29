@@ -275,7 +275,7 @@ export default function ProfessionalPortfolio() {
       const response = await fetch('/api/send-quote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, lang }),
       });
       if (response.ok) {
         setSubmitted(true);
