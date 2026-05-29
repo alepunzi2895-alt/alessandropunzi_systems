@@ -9,8 +9,9 @@ const translations = {
   it: {
     nav: { contact: 'Contatti' },
     hero: {
-      tag: 'Concierge & Luxury Services',
+      tag: 'Tech Solutions & Luxury Services',
       h1: ['Sviluppo Web,', 'Sistemi IA &', 'Servizi Luxury'],
+      subtitle: 'Sviluppo Web, Sistemi IA & Concierge Luxury',
       body: 'Creo soluzioni digitali avanzate e servizi di lusso. Dal web development agli agenti IA, dalla gestione social media al concierge experience a Ibiza.',
       cta1: 'Richiedi Preventivo',
       cta2: 'Scopri Servizi',
@@ -64,8 +65,9 @@ const translations = {
   en: {
     nav: { contact: 'Contact' },
     hero: {
-      tag: 'Concierge & Luxury Services',
+      tag: 'Tech Solutions & Luxury Services',
       h1: ['Web Development,', 'AI Systems &', 'Luxury Services'],
+      subtitle: 'Web Development, AI Systems & Luxury Concierge',
       body: 'I build advanced digital solutions and luxury services. From web development to AI agents, from social media management to concierge experiences in Ibiza.',
       cta1: 'Request a Quote',
       cta2: 'Explore Services',
@@ -119,8 +121,9 @@ const translations = {
   es: {
     nav: { contact: 'Contacto' },
     hero: {
-      tag: 'Concierge & Servicios Luxury',
+      tag: 'Tech Solutions & Luxury Services',
       h1: ['Desarrollo Web,', 'Sistemas IA &', 'Servicios Luxury'],
+      subtitle: 'Desarrollo Web, Sistemas IA & Concierge Luxury',
       body: 'Creo soluciones digitales avanzadas y servicios de lujo. Desde desarrollo web hasta agentes IA, desde gestión de redes sociales hasta experiencias concierge en Ibiza.',
       cta1: 'Solicitar Presupuesto',
       cta2: 'Ver Servicios',
@@ -423,6 +426,9 @@ export default function ProfessionalPortfolio() {
               <br />
               {c.hero.h1[2]}
             </h1>
+            <p className="text-xl md:text-2xl text-gray-400 font-medium tracking-wide">
+              {c.hero.subtitle}
+            </p>
           </div>
           <p className="text-lg text-gray-300 max-w-2xl leading-relaxed animate-fade-in delay-1">
             {c.hero.body}
