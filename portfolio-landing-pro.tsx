@@ -303,14 +303,31 @@ export default function ProfessionalPortfolio() {
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .mono { font-family: 'JetBrains Mono', monospace; }
 
+        /* Corner glow orbs */
         body::before {
           content: '';
           position: fixed;
           top: 0; left: 0;
           width: 100%; height: 100%;
           background:
-            radial-gradient(circle at 20% 50%, rgba(34,197,94,0.04) 0%, transparent 50%),
-            radial-gradient(circle at 80% 80%, rgba(34,197,94,0.03) 0%, transparent 50%);
+            radial-gradient(ellipse 55% 45% at -2%   8%,  rgba(34,197,94,0.11) 0%, transparent 65%),
+            radial-gradient(ellipse 45% 55% at 102%  93%, rgba(34,197,94,0.09) 0%, transparent 65%),
+            radial-gradient(ellipse 32% 38% at 101%  4%,  rgba(34,197,94,0.06) 0%, transparent 60%),
+            radial-gradient(ellipse 28% 32% at  0%  96%,  rgba(34,197,94,0.05) 0%, transparent 60%);
+          pointer-events: none;
+          z-index: 0;
+        }
+
+        /* Edge dot grid — visible only at borders, fades toward center */
+        body::after {
+          content: '';
+          position: fixed;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background-image: radial-gradient(circle, rgba(34,197,94,0.13) 1px, transparent 1px);
+          background-size: 32px 32px;
+          -webkit-mask-image: radial-gradient(ellipse 82% 80% at 50% 50%, transparent 42%, black 72%);
+          mask-image: radial-gradient(ellipse 82% 80% at 50% 50%, transparent 42%, black 72%);
           pointer-events: none;
           z-index: 0;
         }
