@@ -5,11 +5,13 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { name, email, service, budget, message } = body;
+  const { name, email, prefix, phone, service, budget, message } = body;
 
   if (!name || !email || !message) {
     return NextResponse.json({ error: 'Campi obbligatori mancanti' }, { status: 400 });
   }
+
+  const fullPhone = phone ? `${prefix || ''} ${phone}`.trim() : '—';
 
   const { error } = await resend.emails.send({
     from: 'AP Systems <onboarding@resend.dev>',
@@ -28,6 +30,10 @@ export async function POST(req: NextRequest) {
           <tr>
             <td style="padding: 10px 0; color: #9ca3af; font-size: 14px;">Email</td>
             <td style="padding: 10px 0;"><a href="mailto:${email}" style="color: #22c55e;">${email}</a></td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 0; color: #9ca3af; font-size: 14px;">Telefono</td>
+            <td style="padding: 10px 0;"><a href="tel:${fullPhone.replace(/\s/g, '')}" style="color: #22c55e;">${fullPhone}</a></td>
           </tr>
           <tr>
             <td style="padding: 10px 0; color: #9ca3af; font-size: 14px;">Servizio</td>

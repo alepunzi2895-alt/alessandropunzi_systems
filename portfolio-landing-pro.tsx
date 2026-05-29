@@ -54,6 +54,8 @@ const translations = {
       serviceOptions: ['Web Development', 'Sistemi IA & Agenti', 'Social Media & Canva', 'Concierge Luxury'],
       budget: 'Budget orientativo', budgetPlaceholder: 'Seleziona range',
       message: 'Descrivimi il progetto', messagePlaceholder: 'Qual è la tua esigenza? Cosa vorresti realizzare?',
+      phone: 'Numero di telefono',
+      phonePlaceholder: 'Numero',
       submit: 'Invia Richiesta',
       success: '✓ Richiesta inviata! Ti contatterò presto.',
       whatsapp: 'Scrivimi su WhatsApp',
@@ -110,6 +112,8 @@ const translations = {
       serviceOptions: ['Web Development', 'AI Systems & Agents', 'Social Media & Canva', 'Luxury Concierge'],
       budget: 'Approximate budget', budgetPlaceholder: 'Select range',
       message: 'Describe your project', messagePlaceholder: 'What do you need? What would you like to build?',
+      phone: 'Phone number',
+      phonePlaceholder: 'Number',
       submit: 'Send Request',
       success: "✓ Request sent! I'll get back to you soon.",
       whatsapp: 'Message me on WhatsApp',
@@ -166,6 +170,8 @@ const translations = {
       serviceOptions: ['Desarrollo Web', 'Sistemas IA & Agentes', 'Social Media & Canva', 'Concierge Luxury'],
       budget: 'Presupuesto orientativo', budgetPlaceholder: 'Selecciona rango',
       message: 'Cuéntame tu proyecto', messagePlaceholder: '¿Cuál es tu necesidad? ¿Qué quieres crear?',
+      phone: 'Número de teléfono',
+      phonePlaceholder: 'Número',
       submit: 'Enviar Solicitud',
       success: '✓ ¡Solicitud enviada! Te contactaré pronto.',
       whatsapp: 'Escríbeme por WhatsApp',
@@ -193,7 +199,7 @@ const budgetOptions = [
 export default function ProfessionalPortfolio() {
   const [lang, setLang] = useState<Lang>('it');
   const [selectedService, setSelectedService] = useState<string | null>(null);
-  const [formData, setFormData] = useState({ name: '', email: '', service: '', budget: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', prefix: '+39', phone: '', service: '', budget: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
   const c = translations[lang];
@@ -210,7 +216,7 @@ export default function ProfessionalPortfolio() {
         setSubmitted(true);
         setTimeout(() => {
           setSubmitted(false);
-          setFormData({ name: '', email: '', service: '', budget: '', message: '' });
+          setFormData({ name: '', email: '', prefix: '+39', phone: '', service: '', budget: '', message: '' });
         }, 3000);
       }
     } catch (error) {
@@ -391,7 +397,7 @@ export default function ProfessionalPortfolio() {
       <nav className="sticky top-0 z-50 bg-black/85 backdrop-blur-md border-b border-green-600/20">
         <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img src="/ap-systems-logo.png" alt="AP Systems Logo" className="w-20 h-20 object-contain" />
+            <img src="/logo.png" alt="AP Systems Logo" className="w-20 h-20 object-contain" />
             <div className="text-xl font-bold glow-subtle">AP Systems</div>
           </div>
           <div className="flex items-center gap-3">
@@ -550,6 +556,34 @@ export default function ProfessionalPortfolio() {
                 className="w-full px-4 py-3 bg-black border border-green-600/30 rounded text-white placeholder-gray-600"
                 placeholder={c.contact.emailPlaceholder}
               />
+            </div>
+            <div>
+              <label className="block text-sm font-semibold text-gray-200 mb-2">{c.contact.phone}</label>
+              <div className="flex gap-2">
+                <select
+                  value={formData.prefix}
+                  onChange={(e) => setFormData({ ...formData, prefix: e.target.value })}
+                  className="w-28 px-3 py-3 bg-black border border-green-600/30 rounded text-white shrink-0"
+                >
+                  <option value="+39">🇮🇹 +39</option>
+                  <option value="+34">🇪🇸 +34</option>
+                  <option value="+44">🇬🇧 +44</option>
+                  <option value="+33">🇫🇷 +33</option>
+                  <option value="+49">🇩🇪 +49</option>
+                  <option value="+1">🇺🇸 +1</option>
+                  <option value="+31">🇳🇱 +31</option>
+                  <option value="+41">🇨🇭 +41</option>
+                  <option value="+43">🇦🇹 +43</option>
+                  <option value="+351">🇵🇹 +351</option>
+                </select>
+                <input
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="flex-1 px-4 py-3 bg-black border border-green-600/30 rounded text-white placeholder-gray-600"
+                  placeholder={c.contact.phonePlaceholder}
+                />
+              </div>
             </div>
             <div>
               <label className="block text-sm font-semibold text-gray-200 mb-2">{c.contact.service}</label>
