@@ -462,6 +462,32 @@ export default function ProfessionalPortfolio() {
                       box-shadow 0.25s ease, transform 0.2s ease;
         }
         .social-btn:hover { transform: translateY(-2px); }
+
+        /* Logo text shimmer — luxury light sweep */
+        @keyframes logo-shimmer {
+          0%   { background-position: -250% center; }
+          55%  { background-position: 250% center; }
+          100% { background-position: 250% center; }
+        }
+        .logo-text {
+          background: linear-gradient(
+            105deg,
+            #16a34a 0%,
+            #22c55e 38%,
+            #d1fae5 50%,
+            #22c55e 62%,
+            #16a34a 100%
+          );
+          background-size: 300% auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: logo-shimmer 5s ease-in-out infinite;
+          transition: letter-spacing 0.4s ease;
+        }
+        .logo-text:hover {
+          letter-spacing: 0.06em;
+        }
       `}</style>
 
       {/* Navigation */}
@@ -469,7 +495,7 @@ export default function ProfessionalPortfolio() {
         <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <img src="/logo.png" alt="AP Systems Logo" className="w-20 h-20 object-contain" />
-            <div className="text-xl font-bold glow-subtle">AP Systems</div>
+            <div className="logo-text text-xl font-bold">AP Systems</div>
           </div>
           <div className="flex items-center gap-3">
             <select
