@@ -32,11 +32,12 @@ const translations = {
         {
           id: 'ia',
           title: 'Sistemi AI & Agenti',
-          description: 'Agenti autonomi specializzati, automazione intelligente e ChatBot avanzati.',
+          description: 'Agenti autonomi specializzati, automazione intelligente, ChatBot avanzati e connettori MCP.',
           details: [
             'Agenti autonomi su misura per il tuo business',
             'Chatbot intelligenti per assistenza e vendite',
-            'Integrazione API e automazione end-to-end',
+            'Connettori MCP e integrazioni avanzate con qualsiasi tool',
+            'Automazione end-to-end e integrazione API',
           ],
         },
         {
@@ -52,11 +53,12 @@ const translations = {
         {
           id: 'concierge',
           title: 'Concierge Luxury',
-          description: 'Esperienze premium, gestione resort ed event planning white-glove.',
+          description: 'Ville esclusive, auto di lusso, yacht privati e tavoli VIP. Ibiza e multi-destinazione.',
           details: [
-            'Organizzazione eventi esclusivi e prenotazioni luxury',
-            'Scouting resort e gestione esperienze VIP',
-            'Coordinamento multi-destinazione — Ibiza e oltre',
+            'Ville di lusso, supercar e yacht privati su prenotazione',
+            'Tavoli VIP nei migliori club e beach club di Ibiza',
+            'Organizzazione eventi esclusivi e esperienze white-glove',
+            'Multi-destinazione — Ibiza, Formentera, Costa Azzurra e oltre',
           ],
         },
       ],
@@ -112,11 +114,12 @@ const translations = {
         {
           id: 'ia',
           title: 'AI Systems & Agents',
-          description: 'Specialized autonomous agents, intelligent automation and advanced chatbots.',
+          description: 'Specialized autonomous agents, intelligent automation, advanced chatbots and MCP connectors.',
           details: [
             'Custom autonomous agents for your business',
             'Intelligent chatbots for support and sales',
-            'API integration and end-to-end automation',
+            'MCP connectors and advanced integrations with any tool',
+            'End-to-end automation and API integration',
           ],
         },
         {
@@ -132,11 +135,12 @@ const translations = {
         {
           id: 'concierge',
           title: 'Luxury Concierge',
-          description: 'Premium experiences, resort management and white-glove event planning.',
+          description: 'Exclusive villas, luxury cars, private yachts and VIP tables. Ibiza and multi-destination.',
           details: [
-            'Exclusive event organization and luxury bookings',
-            'Resort scouting and VIP experience management',
-            'Multi-destination coordination — Ibiza and beyond',
+            'Luxury villas, supercars and private yachts on request',
+            'VIP tables at Ibiza\'s top clubs and beach clubs',
+            'Exclusive event planning and white-glove experiences',
+            'Multi-destination — Ibiza, Formentera, French Riviera and beyond',
           ],
         },
       ],
@@ -191,12 +195,13 @@ const translations = {
         },
         {
           id: 'ia',
-          title: 'Sistemas IA & Agentes',
-          description: 'Agentes autónomos especializados, automatización inteligente y ChatBots avanzados.',
+          title: 'Sistemas AI & Agentes',
+          description: 'Agentes autónomos especializados, automatización inteligente, ChatBots avanzados y conectores MCP.',
           details: [
             'Agentes autónomos a medida para tu negocio',
             'Chatbots inteligentes para soporte y ventas',
-            'Integración de APIs y automatización end-to-end',
+            'Conectores MCP e integraciones avanzadas con cualquier herramienta',
+            'Automatización end-to-end e integración de APIs',
           ],
         },
         {
@@ -212,11 +217,12 @@ const translations = {
         {
           id: 'concierge',
           title: 'Concierge Luxury',
-          description: 'Experiencias premium, gestión de resorts y planificación de eventos white-glove.',
+          description: 'Villas exclusivas, coches de lujo, yates privados y mesas VIP. Ibiza y multi-destino.',
           details: [
-            'Organización de eventos exclusivos y reservas luxury',
-            'Scouting de resorts y gestión de experiencias VIP',
-            'Coordinación multi-destino — Ibiza y más allá',
+            'Villas de lujo, supercoches y yates privados bajo reserva',
+            'Mesas VIP en los mejores clubs y beach clubs de Ibiza',
+            'Organización de eventos exclusivos y experiencias white-glove',
+            'Multi-destino — Ibiza, Formentera, Costa Azul y más allá',
           ],
         },
       ],
@@ -232,7 +238,7 @@ const translations = {
       phonePlaceholder: 'Introduce tu número',
       service: 'Servicio de interés',
       servicePlaceholder: 'Selecciona un servicio',
-      serviceOptions: ['Desarrollo Web', 'Sistemas IA & Agentes', 'Social Media & Canva', 'Concierge Luxury'],
+      serviceOptions: ['Desarrollo Web', 'Sistemas AI & Agentes', 'Social Media & Canva', 'Concierge Luxury'],
       budget: 'Presupuesto orientativo',
       budgetPlaceholder: 'Selecciona una franja',
       message: 'Cuéntame tu proyecto',
