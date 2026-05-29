@@ -9,10 +9,10 @@ const translations = {
   it: {
     nav: { contact: 'Contatti' },
     hero: {
-      tag: 'Tech Solutions & Luxury Services',
-      h1: ['Sviluppo Web,', 'Sistemi IA &', 'Servizi Luxury'],
-      subtitle: 'Sviluppo Web, Sistemi IA & Concierge Luxury',
-      body: 'Creo soluzioni digitali avanzate e servizi di lusso. Dal web development agli agenti IA, dalla gestione social media al concierge experience a Ibiza.',
+      tag: 'TECH · AI · LUXURY',
+      h1: ['Sviluppo Web,', 'Sistemi AI &', 'Servizi Luxury'],
+      subtitle: 'Dal web al concierge — tecnologia e lusso in un\'unica realtà.',
+      body: 'Realizzo siti web, agenti AI e servizi concierge di alto livello. Un punto di riferimento unico per chi vuole presenza digitale raffinata ed esperienze luxury a Ibiza.',
       cta1: 'Richiedi Preventivo',
       cta2: 'Scopri i Servizi',
     },
@@ -31,7 +31,7 @@ const translations = {
         },
         {
           id: 'ia',
-          title: 'Sistemi IA & Agenti',
+          title: 'Sistemi AI & Agenti',
           description: 'Agenti autonomi specializzati, automazione intelligente e ChatBot avanzati.',
           details: [
             'Agenti autonomi su misura per il tuo business',
@@ -72,7 +72,7 @@ const translations = {
       phonePlaceholder: 'Inserisci il numero',
       service: 'Servizio di interesse',
       servicePlaceholder: 'Seleziona un servizio',
-      serviceOptions: ['Web Development', 'Sistemi IA & Agenti', 'Social Media & Canva', 'Concierge Luxury'],
+      serviceOptions: ['Web Development', 'Sistemi AI & Agenti', 'Social Media & Canva', 'Concierge Luxury'],
       budget: 'Budget orientativo',
       budgetPlaceholder: 'Seleziona una fascia',
       message: 'Descrivi il tuo progetto',
@@ -89,10 +89,10 @@ const translations = {
   en: {
     nav: { contact: 'Contact' },
     hero: {
-      tag: 'Tech Solutions & Luxury Services',
+      tag: 'TECH · AI · LUXURY',
       h1: ['Web Development,', 'AI Systems &', 'Luxury Services'],
-      subtitle: 'Web Development, AI Systems & Luxury Concierge',
-      body: 'I build advanced digital solutions and luxury services. From web development to AI agents, from social media management to concierge experiences in Ibiza.',
+      subtitle: 'From web to concierge — technology and luxury in one unique reality.',
+      body: 'I build high-end websites, AI agents and concierge services. A single reference point for those who want a refined digital presence and luxury experiences in Ibiza.',
       cta1: 'Request a Quote',
       cta2: 'Explore Services',
     },
@@ -169,10 +169,10 @@ const translations = {
   es: {
     nav: { contact: 'Contacto' },
     hero: {
-      tag: 'Tech Solutions & Luxury Services',
-      h1: ['Desarrollo Web,', 'Sistemas IA &', 'Servicios Luxury'],
-      subtitle: 'Desarrollo Web, Sistemas IA & Concierge Luxury',
-      body: 'Creo soluciones digitales avanzadas y servicios de lujo. Desde desarrollo web hasta agentes IA, desde gestión de redes sociales hasta experiencias concierge en Ibiza.',
+      tag: 'TECH · AI · LUXURY',
+      h1: ['Desarrollo Web,', 'Sistemas AI &', 'Servicios Luxury'],
+      subtitle: 'Del web al concierge — tecnología y lujo en una única realidad.',
+      body: 'Creo sitios web de alto nivel, agentes AI y servicios concierge exclusivos. Un punto de referencia único para quienes quieren presencia digital refinada y experiencias luxury en Ibiza.',
       cta1: 'Solicitar Presupuesto',
       cta2: 'Ver Servicios',
     },
