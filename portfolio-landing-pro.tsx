@@ -669,24 +669,24 @@ export default function ProfessionalPortfolio() {
                 <select
                   value={formData.prefix}
                   onChange={(e) => setFormData({ ...formData, prefix: e.target.value })}
-                  className="w-28 px-3 py-3 bg-black border border-green-600/30 rounded text-white shrink-0"
+                  className="w-20 px-2 py-3 bg-black border border-green-600/30 rounded text-white shrink-0 text-sm"
                 >
-                  <option value="+39">🇮🇹 +39</option>
-                  <option value="+34">🇪🇸 +34</option>
-                  <option value="+44">🇬🇧 +44</option>
-                  <option value="+33">🇫🇷 +33</option>
-                  <option value="+49">🇩🇪 +49</option>
-                  <option value="+1">🇺🇸 +1</option>
-                  <option value="+31">🇳🇱 +31</option>
-                  <option value="+41">🇨🇭 +41</option>
-                  <option value="+43">🇦🇹 +43</option>
-                  <option value="+351">🇵🇹 +351</option>
+                  <option value="+39">+39</option>
+                  <option value="+34">+34</option>
+                  <option value="+44">+44</option>
+                  <option value="+33">+33</option>
+                  <option value="+49">+49</option>
+                  <option value="+1">+1</option>
+                  <option value="+31">+31</option>
+                  <option value="+41">+41</option>
+                  <option value="+43">+43</option>
+                  <option value="+351">+351</option>
                 </select>
                 <input
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="flex-1 px-4 py-3 bg-black border border-green-600/30 rounded text-white placeholder-gray-600"
+                  className="flex-1 min-w-0 px-3 py-3 bg-black border border-green-600/30 rounded text-white placeholder-gray-600"
                   placeholder={c.contact.phonePlaceholder}
                 />
               </div>
