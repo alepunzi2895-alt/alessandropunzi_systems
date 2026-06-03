@@ -63,6 +63,26 @@ const translations = {
         },
       ],
     },
+    portfolio: {
+      title: 'Portfolio',
+      cta: 'Contattaci per info',
+      projects: [
+        {
+          id: 'ibizapartyagent',
+          name: 'IbizaPartyAgent',
+          tag: 'Agente AI · WhatsApp · Real-time',
+          description: 'Un agente AI che conosce ogni serata di Ibiza. Chiedili cosa c\'è stasera, la lineup del tuo club preferito o il calendario della prossima settimana — risponde in tempo reale con orari, prezzi, lineup complete e link per la guest list.',
+          features: [
+            'Serate del giorno aggiornate in tempo reale',
+            'Lineup complete per club e data specifica',
+            'Calendario settimanale su richiesta',
+            'Prezzi d\'ingresso, orari e guest list',
+            'Consigli personalizzati sul pick della settimana',
+          ],
+          tech: ['Claude AI', 'WhatsApp', 'Real-time Data', 'Web Scraping'],
+        },
+      ],
+    },
     contact: {
       title: 'Richiedi un Preventivo',
       subtitle: 'Compila il modulo e riceverai una proposta personalizzata entro 24 ore.',
@@ -145,6 +165,26 @@ const translations = {
         },
       ],
     },
+    portfolio: {
+      title: 'Portfolio',
+      cta: 'Contact us for info',
+      projects: [
+        {
+          id: 'ibizapartyagent',
+          name: 'IbizaPartyAgent',
+          tag: 'AI Agent · WhatsApp · Real-time',
+          description: 'An AI agent that knows every night out in Ibiza. Ask it what\'s on tonight, the lineup of your favourite club, or the schedule for next week — it replies in real-time with times, prices, full lineups and guest list links.',
+          features: [
+            'Today\'s events updated in real-time',
+            'Full lineups by club and specific date',
+            'Weekly calendar on request',
+            'Entry prices, times and guest list',
+            'Personalised picks and weekly highlights',
+          ],
+          tech: ['Claude AI', 'WhatsApp', 'Real-time Data', 'Web Scraping'],
+        },
+      ],
+    },
     contact: {
       title: 'Request a Quote',
       subtitle: 'Fill out the form and receive a personalized proposal within 24 hours.',
@@ -224,6 +264,26 @@ const translations = {
             'Organización de eventos exclusivos y experiencias white-glove',
             'Multi-destino — Ibiza, Formentera, Costa Azul y más allá',
           ],
+        },
+      ],
+    },
+    portfolio: {
+      title: 'Portfolio',
+      cta: 'Contáctanos para más info',
+      projects: [
+        {
+          id: 'ibizapartyagent',
+          name: 'IbizaPartyAgent',
+          tag: 'Agente AI · WhatsApp · Tiempo real',
+          description: 'Un agente AI que conoce cada noche de Ibiza. Pregúntale qué hay esta noche, el lineup de tu club favorito o el calendario de la próxima semana — responde en tiempo real con horarios, precios, lineups completos y enlaces a la guest list.',
+          features: [
+            'Eventos del día actualizados en tiempo real',
+            'Lineups completos por club y fecha específica',
+            'Calendario semanal bajo petición',
+            'Precios de entrada, horarios y guest list',
+            'Recomendaciones personalizadas y picks de la semana',
+          ],
+          tech: ['Claude AI', 'WhatsApp', 'Real-time Data', 'Web Scraping'],
         },
       ],
     },
@@ -602,6 +662,74 @@ export default function ProfessionalPortfolio() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Portfolio */}
+      <section id="portfolio" className="py-20 px-6 border-t border-green-600/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="section-title text-5xl font-bold mb-20">{c.portfolio.title}</h2>
+          {c.portfolio.projects.map((project) => (
+            <div key={project.id} className="grid md:grid-cols-2 gap-12 items-start">
+
+              {/* Image gallery — horizontal scroll snap */}
+              <div className="relative">
+                <div
+                  className="flex gap-3 overflow-x-auto pb-3"
+                  style={{ scrollSnapType: 'x mandatory', WebkitOverflowScrolling: 'touch' }}
+                >
+                  {['IMG_5676', 'IMG_5677', 'IMG_5678', 'IMG_5679'].map((img) => (
+                    <div
+                      key={img}
+                      className="shrink-0 rounded-xl overflow-hidden border border-green-600/20"
+                      style={{ scrollSnapAlign: 'start', width: '52%' }}
+                    >
+                      <img
+                        src={`/projects/ibizapartyagent/${img}.jpg`}
+                        alt={`${project.name} screenshot`}
+                        className="w-full h-auto block"
+                      />
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-gray-600 mono mt-2 text-center">← scroll →</p>
+              </div>
+
+              {/* Project info */}
+              <div className="space-y-6">
+                <div>
+                  <p className="text-green-500 text-xs tracking-widest uppercase mono mb-2">{project.tag}</p>
+                  <h3 className="text-4xl font-bold mb-4">{project.name}</h3>
+                  <p className="text-gray-300 leading-relaxed">{project.description}</p>
+                </div>
+
+                <div className="space-y-2">
+                  {project.features.map((f, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <span className="text-green-500 mt-0.5 shrink-0">✓</span>
+                      <span className="text-gray-300 text-sm">{f}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((t) => (
+                    <span key={t} className="text-xs px-3 py-1 bg-green-950/30 border border-green-600/30 text-green-400 rounded-full mono">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href="#contact"
+                  className="btn-primary inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-black font-semibold rounded"
+                >
+                  {c.portfolio.cta} <ChevronRight className="w-4 h-4" />
+                </a>
+              </div>
+
+            </div>
+          ))}
         </div>
       </section>
 
