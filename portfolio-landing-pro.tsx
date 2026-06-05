@@ -81,6 +81,21 @@ const translations = {
           ],
           tech: ['Claude AI', 'WhatsApp', 'Real-time Data', 'Web Scraping'],
         },
+        {
+          id: 'conciergeflow',
+          name: 'ConciergeFlow',
+          tag: 'SPA Web · Vanilla JS · Turso · Multi-tenant',
+          description: 'Gestionale web full-featured per property manager e concierge. Zero dipendenze frontend, database distribuito serverless e design system dark "Nocturnal Clarity" con glassmorphism. Gestisce affitti brevi e a lungo termine con contabilità integrata, CRM ospiti e analisi avanzata.',
+          features: [
+            'Prenotazioni brevi e long-term con rate, cauzione e inquilini multipli',
+            'Contabilità con KPI finanziari, grafico entrate/uscite e dashboard',
+            'CRM ospiti: storico per email, export PDF, import iCal da Airbnb/Booking',
+            '6 grafici dinamici: cash flow, occupazione, profitto per appartamento',
+            'Multi-tenant con isolamento dati per utente e ruoli owner/staff',
+            'i18n IT/EN/ES, lazy-loading CDN — caricamento ridotto del ~70%',
+          ],
+          tech: ['Vanilla JS', 'Turso / libSQL', 'CSS Glassmorphism', 'Multi-tenant', 'i18n'],
+        },
       ],
     },
     contact: {
@@ -182,6 +197,21 @@ const translations = {
             'Personalised picks and weekly highlights',
           ],
           tech: ['Claude AI', 'WhatsApp', 'Real-time Data', 'Web Scraping'],
+        },
+        {
+          id: 'conciergeflow',
+          name: 'ConciergeFlow',
+          tag: 'Web SPA · Vanilla JS · Turso · Multi-tenant',
+          description: 'Full-featured web management tool for property managers and concierge services. Zero frontend dependencies, serverless distributed database and a dark "Nocturnal Clarity" glassmorphism design system. Handles short and long-term rentals with integrated accounting, guest CRM and advanced analytics.',
+          features: [
+            'Short & long-term bookings with rates, deposits and multiple tenants',
+            'Accounting with financial KPIs, income/expense chart and dashboard',
+            'Guest CRM: email history, PDF export, iCal import from Airbnb/Booking',
+            '6 dynamic charts: cash flow, occupancy, profit per apartment',
+            'Multi-tenant with per-user data isolation and owner/staff roles',
+            'i18n IT/EN/ES, CDN lazy-loading — load time reduced by ~70%',
+          ],
+          tech: ['Vanilla JS', 'Turso / libSQL', 'CSS Glassmorphism', 'Multi-tenant', 'i18n'],
         },
       ],
     },
@@ -285,6 +315,21 @@ const translations = {
           ],
           tech: ['Claude AI', 'WhatsApp', 'Real-time Data', 'Web Scraping'],
         },
+        {
+          id: 'conciergeflow',
+          name: 'ConciergeFlow',
+          tag: 'Web SPA · Vanilla JS · Turso · Multi-tenant',
+          description: 'Herramienta de gestión web completa para property managers y servicios de conserjería. Sin dependencias frontend, base de datos distribuida serverless y un sistema de diseño dark "Nocturnal Clarity" con glassmorphism. Gestiona alquileres cortos y largos con contabilidad integrada, CRM de huéspedes y análisis avanzados.',
+          features: [
+            'Reservas cortas y largas con tarifas, depósitos e inquilinos múltiples',
+            'Contabilidad con KPIs financieros, gráfico ingresos/gastos y dashboard',
+            'CRM huéspedes: historial por email, export PDF, import iCal de Airbnb/Booking',
+            '6 gráficos dinámicos: cash flow, ocupación, beneficio por apartamento',
+            'Multi-tenant con aislamiento de datos por usuario y roles owner/staff',
+            'i18n IT/EN/ES, lazy-loading CDN — tiempo de carga reducido un ~70%',
+          ],
+          tech: ['Vanilla JS', 'Turso / libSQL', 'CSS Glassmorphism', 'Multi-tenant', 'i18n'],
+        },
       ],
     },
     contact: {
@@ -311,6 +356,24 @@ const translations = {
     },
     footer: '© 2025 Alessandro Punzi — Todos los derechos reservados.',
   },
+};
+
+const projectImages: Record<string, { src: string; width: string }[]> = {
+  ibizapartyagent: [
+    { src: '/projects/ibizapartyagent/IMG_5676.jpg', width: '52%' },
+    { src: '/projects/ibizapartyagent/IMG_5677.jpg', width: '52%' },
+    { src: '/projects/ibizapartyagent/IMG_5678.jpg', width: '52%' },
+    { src: '/projects/ibizapartyagent/IMG_5679.jpg', width: '52%' },
+  ],
+  conciergeflow: [
+    { src: '/projects/conciergeflow/img-01.jpg', width: '88%' },
+    { src: '/projects/conciergeflow/img-02.jpg', width: '88%' },
+    { src: '/projects/conciergeflow/img-03.jpg', width: '88%' },
+    { src: '/projects/conciergeflow/img-04.jpg', width: '88%' },
+    { src: '/projects/conciergeflow/img-05.jpg', width: '88%' },
+    { src: '/projects/conciergeflow/img-06.jpg', width: '88%' },
+    { src: '/projects/conciergeflow/img-07.jpg', width: '88%' },
+  ],
 };
 
 const serviceIcons: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -669,8 +732,9 @@ export default function ProfessionalPortfolio() {
       <section id="portfolio" className="py-20 px-6 border-t border-green-600/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="section-title text-5xl font-bold mb-20">{c.portfolio.title}</h2>
+          <div className="space-y-24">
           {c.portfolio.projects.map((project) => (
-            <div key={project.id} className="grid md:grid-cols-2 gap-12 items-start">
+            <div key={project.id} className="grid md:grid-cols-2 gap-12 items-start border-t border-green-600/10 pt-12 first:border-t-0 first:pt-0">
 
               {/* Image gallery — horizontal scroll snap */}
               <div className="relative">
@@ -678,15 +742,15 @@ export default function ProfessionalPortfolio() {
                   className="flex gap-3 overflow-x-auto pb-3"
                   style={{ scrollSnapType: 'x mandatory', WebkitOverflowScrolling: 'touch' }}
                 >
-                  {['IMG_5676', 'IMG_5677', 'IMG_5678', 'IMG_5679'].map((img) => (
+                  {(projectImages[project.id] ?? []).map((img, i) => (
                     <div
-                      key={img}
+                      key={i}
                       className="shrink-0 rounded-xl overflow-hidden border border-green-600/20"
-                      style={{ scrollSnapAlign: 'start', width: '52%' }}
+                      style={{ scrollSnapAlign: 'start', width: img.width }}
                     >
                       <img
-                        src={`/projects/ibizapartyagent/${img}.jpg`}
-                        alt={`${project.name} screenshot`}
+                        src={img.src}
+                        alt={`${project.name} screenshot ${i + 1}`}
                         className="w-full h-auto block"
                       />
                     </div>
@@ -730,6 +794,7 @@ export default function ProfessionalPortfolio() {
 
             </div>
           ))}
+          </div>
         </div>
       </section>
 
