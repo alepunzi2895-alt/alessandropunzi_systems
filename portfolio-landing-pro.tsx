@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { Code2, Zap, Camera, Palmtree, Send, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Code2, Zap, Camera, Palmtree, Send, ChevronRight, ChevronLeft, X, Maximize2 } from 'lucide-react';
 
 type Lang = 'it' | 'en' | 'es';
 
@@ -66,6 +66,7 @@ const translations = {
     portfolio: {
       title: 'Portfolio',
       cta: 'Contattaci per info',
+      hint: '← scorri · clicca per ingrandire →',
       projects: [
         {
           id: 'ibizapartyagent',
@@ -80,6 +81,52 @@ const translations = {
             'Consigli personalizzati sul pick della settimana',
           ],
           tech: ['Claude AI', 'WhatsApp', 'Real-time Data', 'Web Scraping'],
+          link: null as { label: string; url: string } | null,
+        },
+        {
+          id: 'vmscout',
+          name: 'VM Scout',
+          tag: 'AI Marketing · React · Claude · Instagram Analytics',
+          description: 'Suite di marketing AI-powered multi-brand: genera strategia visiva, palette colori, direzione artistica e query di ricerca immagini (Unsplash/Pexels/Pixabay) a partire da un brief testuale. Analizza l\'account Instagram collegato con Claude e tiene una "memoria di progetto" che si affina automaticamente ad ogni studio.',
+          features: [
+            'Motore AI che genera strategia, piano editoriale, post e storyboard video da un brief',
+            'Instagram Analytics con Claude: engagement, pubblico, top post e sponsorizzate',
+            'Memoria di progetto auto-aggiornante: direttive, punti di forza, cose da migliorare',
+            'Integrazione Canva Studio per template brand e creazione bozze automatica',
+            'Multi-progetto, multi-lingua (IT/EN/ES/FR/DE), autenticazione utenti',
+          ],
+          tech: ['React', 'Vite', 'Claude AI', 'Turso / libSQL', 'Vercel Functions'],
+          link: null as { label: string; url: string } | null,
+        },
+        {
+          id: 'auraibiza',
+          name: 'Aura Ibiza',
+          tag: 'Next.js · Turso · Multi-ruolo · Booking',
+          description: 'Piattaforma di concierge e gestione proprietà per Ibiza: catalogo di ville, yacht e auto di lusso con ricerca, filtri e dettaglio prenotazione. Flusso guidato Scegli → Richiedi → Conferma → Goditi, dashboard multi-ruolo per admin, owner e concierge, calendario disponibilità e pagamenti centralizzati.',
+          features: [
+            'Catalogo ville, yacht e auto con foto, prezzi e disponibilità in tempo reale',
+            'Multi-ruolo: admin, owner, concierge e agent con permessi dedicati',
+            'Calendario prenotazioni, pagamenti e fee concierge centralizzati',
+            'Mappa interattiva delle proprietà (Leaflet) e ricerca per zona',
+            'Autenticazione sicura, notifiche email e deploy su Vercel',
+          ],
+          tech: ['Next.js 14', 'Turso / libSQL', 'NextAuth', 'Leaflet', 'Resend'],
+          link: { label: 'Instagram · @_aura_ibiza_', url: 'https://instagram.com/_aura_ibiza_' } as { label: string; url: string } | null,
+        },
+        {
+          id: 'whitesoulibiza',
+          name: 'White Soul Ibiza',
+          tag: 'Sito Multi-pagina · Vanilla JS · i18n · Concierge',
+          description: 'Sito vetrina multi-pagina per un servizio di concierge ed event planning di lusso a Ibiza. Design editoriale con tipografia Cormorant Garamond, gallerie immersive a tutto schermo e traduzioni caricate da database in 5 lingue.',
+          features: [
+            'Homepage, Servizi, Esperienze, About e Contatti con navigazione fissa',
+            'Traduzioni EN/IT/ES/FR/DE caricate dinamicamente da Turso',
+            'Design editoriale full-bleed con font Cormorant Garamond + Inter',
+            'Widget WhatsApp e form di contatto per richieste dirette',
+            'Zero framework, zero build step — HTML5/CSS3/JS vanilla',
+          ],
+          tech: ['HTML5', 'CSS3', 'Vanilla JS', 'Turso / libSQL', 'i18n'],
+          link: null as { label: string; url: string } | null,
         },
         {
           id: 'conciergeflow',
@@ -95,6 +142,7 @@ const translations = {
             'i18n IT/EN/ES, lazy-loading CDN — caricamento ridotto del ~70%',
           ],
           tech: ['Vanilla JS', 'Turso / libSQL', 'CSS Glassmorphism', 'Multi-tenant', 'i18n'],
+          link: null as { label: string; url: string } | null,
         },
       ],
     },
@@ -183,6 +231,7 @@ const translations = {
     portfolio: {
       title: 'Portfolio',
       cta: 'Contact us for info',
+      hint: '← scroll · click to enlarge →',
       projects: [
         {
           id: 'ibizapartyagent',
@@ -197,6 +246,52 @@ const translations = {
             'Personalised picks and weekly highlights',
           ],
           tech: ['Claude AI', 'WhatsApp', 'Real-time Data', 'Web Scraping'],
+          link: null as { label: string; url: string } | null,
+        },
+        {
+          id: 'vmscout',
+          name: 'VM Scout',
+          tag: 'AI Marketing · React · Claude · Instagram Analytics',
+          description: 'Multi-brand AI-powered marketing suite: generates visual strategy, colour palette, art direction and image search queries (Unsplash/Pexels/Pixabay) from a text brief. Analyses the connected Instagram account with Claude and keeps a self-improving "project memory" that refines itself with every study.',
+          features: [
+            'AI engine that generates strategy, editorial plan, posts and video storyboards from a brief',
+            'Instagram Analytics powered by Claude: engagement, audience, top posts and sponsored content',
+            'Self-updating project memory: directives, strengths, areas to improve',
+            'Canva Studio integration for brand templates and automatic draft creation',
+            'Multi-project, multi-language (IT/EN/ES/FR/DE), user authentication',
+          ],
+          tech: ['React', 'Vite', 'Claude AI', 'Turso / libSQL', 'Vercel Functions'],
+          link: null as { label: string; url: string } | null,
+        },
+        {
+          id: 'auraibiza',
+          name: 'Aura Ibiza',
+          tag: 'Next.js · Turso · Multi-role · Booking',
+          description: 'Concierge and property management platform for Ibiza: a catalogue of luxury villas, yachts and cars with search, filters and a full booking detail view. Guided Choose → Request → Confirm → Enjoy flow, multi-role dashboard for admins, owners and concierges, availability calendar and centralised payments.',
+          features: [
+            'Villa, yacht and car catalogue with photos, pricing and real-time availability',
+            'Multi-role access: admin, owner, concierge and agent with dedicated permissions',
+            'Centralised bookings calendar, payments and concierge fees',
+            'Interactive property map (Leaflet) and search by area',
+            'Secure authentication, email notifications and Vercel deployment',
+          ],
+          tech: ['Next.js 14', 'Turso / libSQL', 'NextAuth', 'Leaflet', 'Resend'],
+          link: { label: 'Instagram · @_aura_ibiza_', url: 'https://instagram.com/_aura_ibiza_' } as { label: string; url: string } | null,
+        },
+        {
+          id: 'whitesoulibiza',
+          name: 'White Soul Ibiza',
+          tag: 'Multi-page Site · Vanilla JS · i18n · Concierge',
+          description: 'Multi-page showcase site for a luxury concierge and event planning service in Ibiza. Editorial design with Cormorant Garamond typography, full-screen immersive galleries and database-driven translations in 5 languages.',
+          features: [
+            'Home, Services, Experiences, About and Contact with a fixed navigation',
+            'EN/IT/ES/FR/DE translations loaded dynamically from Turso',
+            'Full-bleed editorial design with Cormorant Garamond + Inter',
+            'WhatsApp widget and contact form for direct enquiries',
+            'Zero framework, zero build step — vanilla HTML5/CSS3/JS',
+          ],
+          tech: ['HTML5', 'CSS3', 'Vanilla JS', 'Turso / libSQL', 'i18n'],
+          link: null as { label: string; url: string } | null,
         },
         {
           id: 'conciergeflow',
@@ -212,6 +307,7 @@ const translations = {
             'i18n IT/EN/ES, CDN lazy-loading — load time reduced by ~70%',
           ],
           tech: ['Vanilla JS', 'Turso / libSQL', 'CSS Glassmorphism', 'Multi-tenant', 'i18n'],
+          link: null as { label: string; url: string } | null,
         },
       ],
     },
@@ -300,6 +396,7 @@ const translations = {
     portfolio: {
       title: 'Portfolio',
       cta: 'Contáctanos para más info',
+      hint: '← desliza · haz clic para ampliar →',
       projects: [
         {
           id: 'ibizapartyagent',
@@ -314,6 +411,52 @@ const translations = {
             'Recomendaciones personalizadas y picks de la semana',
           ],
           tech: ['Claude AI', 'WhatsApp', 'Real-time Data', 'Web Scraping'],
+          link: null as { label: string; url: string } | null,
+        },
+        {
+          id: 'vmscout',
+          name: 'VM Scout',
+          tag: 'AI Marketing · React · Claude · Instagram Analytics',
+          description: 'Suite de marketing con IA multi-marca: genera estrategia visual, paleta de colores, dirección artística y queries de búsqueda de imágenes (Unsplash/Pexels/Pixabay) a partir de un brief. Analiza la cuenta de Instagram conectada con Claude y mantiene una "memoria de proyecto" que se perfecciona sola con cada estudio.',
+          features: [
+            'Motor de IA que genera estrategia, plan editorial, posts y storyboard de vídeo desde un brief',
+            'Instagram Analytics con Claude: engagement, audiencia, top posts y contenido patrocinado',
+            'Memoria de proyecto autoactualizable: directrices, puntos fuertes, cosas a mejorar',
+            'Integración con Canva Studio para plantillas de marca y creación automática de borradores',
+            'Multi-proyecto, multi-idioma (IT/EN/ES/FR/DE), autenticación de usuarios',
+          ],
+          tech: ['React', 'Vite', 'Claude AI', 'Turso / libSQL', 'Vercel Functions'],
+          link: null as { label: string; url: string } | null,
+        },
+        {
+          id: 'auraibiza',
+          name: 'Aura Ibiza',
+          tag: 'Next.js · Turso · Multi-rol · Reservas',
+          description: 'Plataforma de concierge y gestión de propiedades para Ibiza: catálogo de villas, yates y coches de lujo con búsqueda, filtros y ficha de reserva detallada. Flujo guiado Elegir → Solicitar → Confirmar → Disfrutar, panel multi-rol para admin, owner y concierge, calendario de disponibilidad y pagos centralizados.',
+          features: [
+            'Catálogo de villas, yates y coches con fotos, precios y disponibilidad en tiempo real',
+            'Multi-rol: admin, owner, concierge y agent con permisos dedicados',
+            'Calendario de reservas, pagos y comisiones de concierge centralizados',
+            'Mapa interactivo de propiedades (Leaflet) y búsqueda por zona',
+            'Autenticación segura, notificaciones por email y despliegue en Vercel',
+          ],
+          tech: ['Next.js 14', 'Turso / libSQL', 'NextAuth', 'Leaflet', 'Resend'],
+          link: { label: 'Instagram · @_aura_ibiza_', url: 'https://instagram.com/_aura_ibiza_' } as { label: string; url: string } | null,
+        },
+        {
+          id: 'whitesoulibiza',
+          name: 'White Soul Ibiza',
+          tag: 'Sitio Multi-página · Vanilla JS · i18n · Concierge',
+          description: 'Sitio web multi-página para un servicio de concierge y organización de eventos de lujo en Ibiza. Diseño editorial con tipografía Cormorant Garamond, galerías inmersivas a pantalla completa y traducciones cargadas desde base de datos en 5 idiomas.',
+          features: [
+            'Home, Servicios, Experiencias, About y Contacto con navegación fija',
+            'Traducciones EN/IT/ES/FR/DE cargadas dinámicamente desde Turso',
+            'Diseño editorial a sangre completa con Cormorant Garamond + Inter',
+            'Widget de WhatsApp y formulario de contacto para consultas directas',
+            'Cero framework, cero build step — HTML5/CSS3/JS vanilla',
+          ],
+          tech: ['HTML5', 'CSS3', 'Vanilla JS', 'Turso / libSQL', 'i18n'],
+          link: null as { label: string; url: string } | null,
         },
         {
           id: 'conciergeflow',
@@ -329,6 +472,7 @@ const translations = {
             'i18n IT/EN/ES, lazy-loading CDN — tiempo de carga reducido un ~70%',
           ],
           tech: ['Vanilla JS', 'Turso / libSQL', 'CSS Glassmorphism', 'Multi-tenant', 'i18n'],
+          link: null as { label: string; url: string } | null,
         },
       ],
     },
@@ -365,6 +509,24 @@ const projectImages: Record<string, { src: string; width: string }[]> = {
     { src: '/projects/ibizapartyagent/IMG_5678.jpg', width: '52%' },
     { src: '/projects/ibizapartyagent/IMG_5679.jpg', width: '52%' },
   ],
+  vmscout: [
+    { src: '/projects/vmscout/img-01.jpg', width: '90%' },
+    { src: '/projects/vmscout/img-02.jpg', width: '90%' },
+    { src: '/projects/vmscout/img-03.jpg', width: '90%' },
+    { src: '/projects/vmscout/img-04.jpg', width: '90%' },
+  ],
+  auraibiza: [
+    { src: '/projects/auraibiza/img-01.jpg', width: '90%' },
+    { src: '/projects/auraibiza/img-02.jpg', width: '90%' },
+    { src: '/projects/auraibiza/img-03.jpg', width: '90%' },
+    { src: '/projects/auraibiza/img-04.jpg', width: '90%' },
+  ],
+  whitesoulibiza: [
+    { src: '/projects/whitesoulibiza/img-01.jpg', width: '90%' },
+    { src: '/projects/whitesoulibiza/img-02.jpg', width: '90%' },
+    { src: '/projects/whitesoulibiza/img-03.jpg', width: '90%' },
+    { src: '/projects/whitesoulibiza/img-04.jpg', width: '90%' },
+  ],
   conciergeflow: [
     { src: '/projects/conciergeflow/img-01.jpg', width: '88%' },
     { src: '/projects/conciergeflow/img-02.jpg', width: '88%' },
@@ -395,8 +557,29 @@ export default function ProfessionalPortfolio() {
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [formData, setFormData] = useState({ name: '', email: '', prefix: '+39', phone: '', service: '', budget: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [lightbox, setLightbox] = useState<{ id: string; index: number } | null>(null);
 
   const c = translations[lang];
+
+  const lightboxImages = lightbox ? (projectImages[lightbox.id] ?? []) : [];
+
+  const closeLightbox = () => setLightbox(null);
+  const showPrev = () =>
+    setLightbox((cur) => (cur ? { id: cur.id, index: (cur.index - 1 + lightboxImages.length) % lightboxImages.length } : cur));
+  const showNext = () =>
+    setLightbox((cur) => (cur ? { id: cur.id, index: (cur.index + 1) % lightboxImages.length } : cur));
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showPrev();
+      if (e.key === 'ArrowRight') showNext();
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lightbox]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -745,18 +928,22 @@ export default function ProfessionalPortfolio() {
                   {(projectImages[project.id] ?? []).map((img, i) => (
                     <div
                       key={i}
-                      className="shrink-0 rounded-xl overflow-hidden border border-green-600/20"
+                      onClick={() => setLightbox({ id: project.id, index: i })}
+                      className="group relative shrink-0 rounded-xl overflow-hidden border border-green-600/20 cursor-zoom-in"
                       style={{ scrollSnapAlign: 'start', width: img.width }}
                     >
                       <img
                         src={img.src}
                         alt={`${project.name} screenshot ${i + 1}`}
-                        className="w-full h-auto block"
+                        className="w-full h-auto block transition-transform duration-300 group-hover:scale-[1.03]"
                       />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/30 transition-colors duration-300">
+                        <Maximize2 className="w-6 h-6 text-white opacity-0 group-hover:opacity-90 transition-opacity duration-300 drop-shadow-lg" />
+                      </div>
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-gray-600 mono mt-2 text-center">← scroll →</p>
+                <p className="text-xs text-gray-600 mono mt-2 text-center">{c.portfolio.hint}</p>
               </div>
 
               {/* Project info */}
@@ -784,12 +971,27 @@ export default function ProfessionalPortfolio() {
                   ))}
                 </div>
 
-                <a
-                  href="#contact"
-                  className="btn-primary inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-black font-semibold rounded"
-                >
-                  {c.portfolio.cta} <ChevronRight className="w-4 h-4" />
-                </a>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="#contact"
+                    className="btn-primary inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-black font-semibold rounded"
+                  >
+                    {c.portfolio.cta} <ChevronRight className="w-4 h-4" />
+                  </a>
+                  {project.link && (
+                    <a
+                      href={project.link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="social-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-pink-500/40 bg-pink-500/5 text-pink-400 hover:border-pink-500/80 hover:bg-pink-500/10 font-semibold"
+                    >
+                      <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                      </svg>
+                      {project.link.label}
+                    </a>
+                  )}
+                </div>
               </div>
 
             </div>
@@ -797,6 +999,55 @@ export default function ProfessionalPortfolio() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox */}
+      {lightbox && lightboxImages[lightbox.index] && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-10"
+          onClick={closeLightbox}
+        >
+          <button
+            onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
+            className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-full bg-black/60 border border-green-600/40 text-green-400 hover:bg-green-600/20 hover:text-white transition-colors"
+            aria-label="Close"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          {lightboxImages.length > 1 && (
+            <button
+              onClick={(e) => { e.stopPropagation(); showPrev(); }}
+              className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-black/60 border border-green-600/40 text-green-400 hover:bg-green-600/20 hover:text-white transition-colors"
+              aria-label="Previous"
+            >
+              <ChevronLeft className="w-6 h-6 md:w-7 md:h-7" />
+            </button>
+          )}
+
+          <img
+            src={lightboxImages[lightbox.index].src}
+            alt={`${lightbox.id} screenshot ${lightbox.index + 1}`}
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[88vh] max-w-[92vw] object-contain rounded-lg border border-green-600/20 shadow-[0_0_60px_rgba(34,197,94,0.15)]"
+          />
+
+          {lightboxImages.length > 1 && (
+            <button
+              onClick={(e) => { e.stopPropagation(); showNext(); }}
+              className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-black/60 border border-green-600/40 text-green-400 hover:bg-green-600/20 hover:text-white transition-colors"
+              aria-label="Next"
+            >
+              <ChevronRight className="w-6 h-6 md:w-7 md:h-7" />
+            </button>
+          )}
+
+          {lightboxImages.length > 1 && (
+            <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 mono text-xs text-green-400/80 bg-black/60 px-3 py-1 rounded-full border border-green-600/30">
+              {lightbox.index + 1} / {lightboxImages.length}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Contact Form */}
       <section id="contact" className="py-20 px-6 border-t border-green-600/20 bg-gradient-to-b from-transparent via-green-950/5 to-transparent">
