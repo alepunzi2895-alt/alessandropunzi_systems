@@ -1,0 +1,152 @@
+import type { Dictionary } from './types';
+
+export const en: Dictionary = {
+  meta: {
+    title: 'AP Systems — AI Agents for Ibiza Hospitality & Luxury',
+    description:
+      'AI agents on WhatsApp, high-converting websites and custom booking systems for villas, clubs, restaurants and concierge businesses in Ibiza.',
+    ogLocale: 'en_US',
+  },
+  nav: { contact: 'Contact' },
+  hero: {
+    tag: 'AI · WHATSAPP · IBIZA',
+    headline: 'AI agents that answer your guests on WhatsApp.',
+    headlineEmphasis: 'Even at 4 AM.',
+    subtitle: 'Tech built for hospitality and luxury businesses in Ibiza.',
+    ctaPrimary: 'Try the live agent',
+    ctaPrimaryPrefill: "What's on tonight?",
+    ctaSecondary: 'See the offers',
+  },
+  offers: {
+    title: 'Offers',
+    otherProject: 'Different project? Get in touch.',
+    packages: [
+      {
+        id: 'whatsapp-agent',
+        name: 'WhatsApp AI Agent',
+        forWho: "For villas, hotels, restaurants and clubs that can't afford to miss a message.",
+        includes: [
+          'Answers your guests 24/7, even at night',
+          'Info, availability and bookings handled automatically',
+          'Lists, times and prices always up to date',
+        ],
+        priceLabel: 'from [[TODO: setup price]] + [[TODO: monthly fee]]',
+        cta: 'I want this',
+      },
+      {
+        id: 'converting-website',
+        name: 'Website That Converts',
+        forWho: 'For businesses that need a fast, multilingual showcase built to bring in enquiries.',
+        includes: [
+          'Multilingual, fast, mobile-optimized website',
+          'WhatsApp contact built into every page',
+          'Quick delivery, live in [[TODO: N days]]',
+        ],
+        priceLabel: 'from [[TODO: price]]',
+        cta: 'I want this',
+      },
+      {
+        id: 'custom-booking',
+        name: 'Custom Booking System',
+        forWho: 'For property managers and concierge teams running multiple properties or bookings.',
+        includes: [
+          'Bookings, calendar and accounting in one place',
+          'Guest CRM with full history',
+          'Automatic import from Airbnb and Booking',
+        ],
+        priceLabel: 'from [[TODO: setup price]] + [[TODO: monthly fee]]',
+        cta: 'I want this',
+      },
+    ],
+  },
+  caseStudies: {
+    title: 'Case Studies',
+    galleryHint: 'Click to see all photos',
+    labels: { problem: 'Problem', solution: 'Solution', result: 'Result', photoCountSuffix: 'photos' },
+    projects: [
+      {
+        id: 'ibizapartyagent',
+        name: 'IbizaPartyAgent',
+        tag: 'AI Agent · WhatsApp · Real-time',
+        problem: "Guests ask the same questions on WhatsApp over and over — times, prices, lineups — at any hour.",
+        solution:
+          'An AI agent replies in real time with events, lineups and guest list access for every club and date, no manual work needed.',
+        result: '[[TODO: real data — e.g. messages handled per month, average response time]]',
+        tech: ['Claude AI', 'WhatsApp', 'Real-time Data', 'Web Scraping'],
+        ctas: [{ label: 'Try it on WhatsApp', action: 'whatsapp' }],
+      },
+      {
+        id: 'conciergeflow',
+        name: 'ConciergeFlow',
+        tag: 'Booking System · Multi-tenant',
+        problem: 'Property managers and concierge teams track bookings, accounting and guests across scattered spreadsheets.',
+        solution:
+          'One system for short and long-term bookings, accounting, guest CRM and automatic import from Airbnb and Booking.',
+        result: '[[TODO: real data — e.g. hours saved per week, properties managed]]',
+        tech: ['Vanilla JS', 'Turso / libSQL', 'Multi-tenant', 'i18n'],
+        ctas: [{ label: 'Request a demo', action: 'contact', presetService: 'Custom Booking System' }],
+      },
+      {
+        id: 'auraibiza',
+        name: 'Aura Ibiza',
+        tag: 'Concierge · Booking',
+        problem: 'Luxury villas, yachts and cars managed by hand, across WhatsApp, spreadsheets and phone calls.',
+        solution:
+          'A concierge platform with a catalogue, guided booking flow and a multi-role dashboard for admins, owners and concierges.',
+        result: '[[TODO: real data — e.g. bookings handled, active villas on the platform]]',
+        tech: ['Next.js 14', 'Turso / libSQL', 'NextAuth', 'Leaflet'],
+        ctas: [
+          { label: 'See it on Instagram', action: 'external', url: 'https://instagram.com/_aura_ibiza_' },
+          { label: 'I want something similar', action: 'contact', presetService: 'Other' },
+        ],
+      },
+    ],
+  },
+  about: {
+    title: 'About Me',
+    bio: "I'm Alessandro Punzi, a Data Architect working on enterprise projects for an automotive multinational. I bring that same enterprise-grade quality to local businesses. Based in Ibiza, I speak Italian, English and Spanish.",
+    photoAlt: 'Alessandro Punzi',
+    initials: 'AP',
+  },
+  testimonials: {
+    title: 'Testimonials',
+  },
+  contact: {
+    title: 'Request a Quote',
+    subtitle: 'Fill out the form and receive a personalized proposal within 24 hours.',
+    name: 'Name',
+    namePlaceholder: 'Your name',
+    email: 'Email',
+    emailPlaceholder: 'your@email.com',
+    phone: 'WhatsApp',
+    phonePlaceholder: 'Your number',
+    service: 'Service of interest',
+    servicePlaceholder: 'Select a service',
+    serviceOptions: ['WhatsApp AI Agent', 'Website That Converts', 'Custom Booking System', 'Other'],
+    budget: 'Approximate budget',
+    budgetPlaceholder: 'Select a range',
+    message: 'Describe your project',
+    messagePlaceholder: 'What do you need? What would you like to build?',
+    submit: 'Send Request',
+    success: "✓ Request sent! I'll get back to you within 24 hours.",
+    whatsapp: 'Message me on WhatsApp',
+    bookCall: 'Book a 15-min call',
+    bookCallSoon: 'Link coming soon',
+    responsePromise: 'I reply within 24h.',
+    orLabel: 'or reach me directly',
+  },
+  footer: {
+    contactsLabel: 'Contact',
+    copyrightTemplate: '© {year} Alessandro Punzi — All rights reserved.',
+  },
+  chat: {
+    title: 'AI Assistant',
+    subtitle: 'WhatsApp AI Agent demo',
+    greeting: 'Hi! Ask me about services, rough pricing or delivery times.',
+    placeholder: 'Type a message...',
+    openLabel: 'Open the AI assistant chat',
+    closeLabel: 'Close the chat',
+    sendLabel: 'Send',
+    errorMessage: 'Something went wrong. Message us on WhatsApp for a quick reply.',
+  },
+};

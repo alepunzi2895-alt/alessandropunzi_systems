@@ -9,18 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "@libsql/client": "^0.14.0",
+    "lucide-react": "^0.468.0",
     "next": "15.3.6",
+    "qrcode": "^1.5.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "lucide-react": "^0.468.0",
-    "resend": "^4.0.0",
-    "@libsql/client": "^0.14.0"
+    "resend": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.20",
+    "playwright": "^1.63.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
