@@ -2,17 +2,17 @@ import type { Dictionary } from './types';
 
 export const it: Dictionary = {
   meta: {
-    title: 'AP Systems — Agenti AI per hospitality e lusso a Ibiza',
+    title: 'AP Systems — Agenti AI, siti e gestionali per business a Ibiza',
     description:
-      'Agenti AI su WhatsApp, siti che convertono e gestionali su misura per ville, club, ristoranti e concierge a Ibiza.',
+      'Agenti AI su WhatsApp, siti che convertono e gestionali su misura per attività e professionisti a Ibiza.',
     ogLocale: 'it_IT',
   },
   nav: { contact: 'Contatti' },
   hero: {
     tag: 'AI · WHATSAPP · IBIZA',
-    headline: 'Agenti AI che rispondono ai tuoi ospiti su WhatsApp.',
-    headlineEmphasis: 'Anche alle 4 del mattino.',
-    subtitle: 'Tecnologia su misura per hospitality e lusso a Ibiza.',
+    headline: 'La tecnologia che lavora per te.',
+    headlineEmphasis: 'Anche quando tu non ci sei.',
+    subtitle: 'Agenti AI, siti e gestionali su misura per il tuo business.',
     ctaPrimary: "Prova l'agente live",
     ctaPrimaryPrefill: "Cosa c'è stasera?",
     ctaSecondary: 'Vedi le offerte',
@@ -24,13 +24,13 @@ export const it: Dictionary = {
       {
         id: 'whatsapp-agent',
         name: 'Agente AI WhatsApp',
-        forWho: 'Per ville, hotel, ristoranti e club che non vogliono perdere nessun messaggio.',
+        forWho: 'Per hotel, ristoranti, negozi e professionisti che non vogliono perdere nessun messaggio.',
         includes: [
           'Risponde ai tuoi ospiti 24/7, anche di notte',
           'Info, disponibilità e prenotazioni in automatico',
           'Liste, orari e prezzi sempre aggiornati',
         ],
-        priceLabel: 'da [[TODO: prezzo setup]] + [[TODO: canone mensile]]',
+        priceLabel: 'da €990 setup + €79/mese',
         cta: 'Voglio questo',
       },
       {
@@ -40,9 +40,9 @@ export const it: Dictionary = {
         includes: [
           'Sito multilingua, veloce e ottimizzato per mobile',
           'Contatto WhatsApp integrato in ogni pagina',
-          'Consegna rapida, pronto in [[TODO: N giorni]]',
+          'Consegna rapida, pronto in 10 giorni lavorativi',
         ],
-        priceLabel: 'da [[TODO: prezzo]]',
+        priceLabel: 'da €1.500',
         cta: 'Voglio questo',
       },
       {
@@ -54,7 +54,7 @@ export const it: Dictionary = {
           'CRM ospiti con storico completo',
           'Import automatico da Airbnb e Booking',
         ],
-        priceLabel: 'da [[TODO: prezzo setup]] + [[TODO: canone mensile]]',
+        priceLabel: 'da €2.500 setup + €149/mese',
         cta: 'Voglio questo',
       },
     ],
@@ -104,7 +104,7 @@ export const it: Dictionary = {
   },
   about: {
     title: 'Chi sono',
-    bio: 'Sono Alessandro Punzi, Data Architect su progetti enterprise per una multinazionale del settore automotive. Porto la stessa qualità enterprise nei progetti per business locali. Vivo a Ibiza e parlo italiano, inglese e spagnolo.',
+    bio: 'Sono Alessandro Punzi, Data Architect su progetti enterprise per una multinazionale del settore automotive. Uso la stessa attenzione e lo stesso rigore per ogni cliente, dalla grande azienda al piccolo business locale. Parlo italiano, inglese e spagnolo.',
     photoAlt: 'Alessandro Punzi',
     initials: 'AP',
   },
