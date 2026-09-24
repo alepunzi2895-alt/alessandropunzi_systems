@@ -12,7 +12,7 @@ export const en: Dictionary = {
     tag: "AI AGENTS · WEBSITES · MANAGEMENT APPS · MARKETING",
     headline: "Your business answers its customers.",
     headlineEmphasis: "Even at 4 AM.",
-    subtitle: "AI agents on WhatsApp, websites and custom management software for hotels, restaurants and property managers.",
+    subtitle: "AI agents on WhatsApp, websites, custom management software and marketing for hotels, restaurants and property managers.",
     ctaPrimary: 'Try the live agent',
     ctaSecondary: 'See the offers',
   },

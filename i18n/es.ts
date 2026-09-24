@@ -12,7 +12,7 @@ export const es: Dictionary = {
     tag: "AGENTES IA · WEBS · SOFTWARE DE GESTIÓN · MARKETING",
     headline: "Tu negocio responde a sus clientes.",
     headlineEmphasis: "Incluso a las 4 de la madrugada.",
-    subtitle: "Agentes de IA en WhatsApp, webs y software de gestión a medida para hoteles, restaurantes y property managers.",
+    subtitle: "Agentes de IA en WhatsApp, webs, software de gestión a medida y marketing para hoteles, restaurantes y property managers.",
     ctaPrimary: 'Prueba el agente en vivo',
     ctaSecondary: 'Ver las ofertas',
   },

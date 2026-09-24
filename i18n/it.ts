@@ -12,7 +12,7 @@ export const it: Dictionary = {
     tag: "AGENTI AI · SITI WEB · GESTIONALI · MARKETING",
     headline: "Il tuo business risponde ai clienti.",
     headlineEmphasis: "Anche alle 4 di notte.",
-    subtitle: "Agenti AI su WhatsApp, siti e gestionali su misura per hotel, ristoranti e property manager.",
+    subtitle: "Agenti AI su WhatsApp, siti, gestionali su misura e marketing per hotel, ristoranti e property manager.",
     ctaPrimary: "Prova l'agente live",
     ctaSecondary: 'Vedi le offerte',
   },
