@@ -3,6 +3,7 @@
 import { ChevronRight } from 'lucide-react';
 import type { Dictionary } from '@/i18n';
 import { BOOKING_CALL_URL } from '@/lib/config';
+import { isRenderable } from '@/lib/content';
 
 export default function Offers({
   dict,
@@ -18,7 +19,7 @@ export default function Offers({
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="section-title text-5xl font-bold mb-20">{dict.offers.title}</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {dict.offers.packages.map((pkg, idx) => (
             <div
               key={pkg.id}
@@ -35,7 +36,7 @@ export default function Offers({
                   </div>
                 ))}
               </div>
-              <p className="mono text-green-400 text-xs mb-6">{pkg.priceLabel}</p>
+              {isRenderable(pkg.priceLabel) && <p className="mono text-green-400 text-xs mb-6">{pkg.priceLabel}</p>}
               <a
                 href="#contact"
                 onClick={() => onSelectPackage(pkg.name)}

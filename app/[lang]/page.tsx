@@ -10,7 +10,7 @@ export function generateStaticParams() {
   return supportedLangs.map((lang) => ({ lang }));
 }
 
-const CASE_STUDY_SLUGS = ['ibizapartyagent', 'conciergeflow', 'auraibiza'] as const;
+const CASE_STUDY_SLUGS = ['ibizapartyagent', 'conciergeflow', 'auraibiza', 'vmscout'] as const;
 
 function getVideoAvailability(): Record<string, boolean> {
   const availability: Record<string, boolean> = {};

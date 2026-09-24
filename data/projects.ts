@@ -23,17 +23,17 @@ export const projectImagePaths: Record<string, string[]> = {
     '/projects/conciergeflow/img-06.jpg',
     '/projects/conciergeflow/img-07.jpg',
   ],
-};
-
-// Archived (VM Scout, White Soul Ibiza) screenshot paths — not rendered, kept
-// alongside data/archivedProjects.ts for a possible future reactivation.
-export const archivedProjectImagePaths: Record<string, string[]> = {
   vmscout: [
     '/projects/vmscout/img-01.jpg',
     '/projects/vmscout/img-02.jpg',
     '/projects/vmscout/img-03.jpg',
     '/projects/vmscout/img-04.jpg',
   ],
+};
+
+// Archived (White Soul Ibiza) screenshot paths — not rendered, kept
+// alongside data/archivedProjects.ts for a possible future reactivation.
+export const archivedProjectImagePaths: Record<string, string[]> = {
   whitesoulibiza: [
     '/projects/whitesoulibiza/img-01.jpg',
     '/projects/whitesoulibiza/img-02.jpg',

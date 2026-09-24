@@ -9,7 +9,7 @@ export const it: Dictionary = {
   },
   nav: { contact: 'Contatti' },
   hero: {
-    tag: 'AI · WHATSAPP · IBIZA',
+    tag: "AGENTI AI · SITI WEB · GESTIONALI · MARKETING",
     headline: "Il tuo business risponde ai clienti.",
     headlineEmphasis: "Anche alle 4 di notte.",
     subtitle: "Agenti AI su WhatsApp, siti e gestionali su misura per hotel, ristoranti e property manager.",
@@ -58,6 +58,18 @@ export const it: Dictionary = {
         priceLabel: 'da €2.500 setup + €149/mese',
         cta: 'Voglio questo',
       },
+      {
+        id: 'social-marketing',
+        name: "Marketing e crescita Instagram",
+        forWho: "Per attività che vogliono farsi trovare su Instagram e trasformare i follower in clienti.",
+        includes: [
+          "Strategia, piano editoriale e contenuti per il tuo profilo",
+          "Pubblicazione costante e gestione della community",
+          "Report mensile sui risultati, chiaro e leggibile",
+        ],
+        priceLabel: 'da €490/mese',
+        cta: 'Voglio questo',
+      },
     ],
   },
   caseStudies: {
@@ -101,6 +113,16 @@ export const it: Dictionary = {
           { label: 'Voglio qualcosa di simile', action: 'contact', presetService: 'Altro' },
         ],
       },
+      {
+        id: 'vmscout',
+        name: 'VM Scout',
+        tag: "AI Marketing · Instagram Analytics",
+        problem: "Creare contenuti per più brand richiede strategia, direzione visiva e analisi dei risultati: ore di lavoro ripetute per ogni progetto.",
+        solution: "Una suite di marketing con AI che da un brief genera strategia, piano editoriale, post e storyboard video, analizza l'account Instagram collegato e tiene una memoria di progetto che migliora a ogni analisi.",
+        result: '',
+        tech: ['React', 'Claude AI', 'Instagram Analytics', 'Turso / libSQL'],
+        ctas: [{ label: "Voglio qualcosa di simile", action: 'contact', presetService: "Marketing e crescita Instagram" }],
+      },
     ],
   },
   about: {
@@ -127,7 +149,7 @@ export const it: Dictionary = {
     phonePlaceholder: 'Il tuo numero',
     service: 'Servizio di interesse',
     servicePlaceholder: 'Seleziona un servizio',
-    serviceOptions: ['Agente AI WhatsApp', 'Sito che converte', 'Gestionale su misura', 'Altro'],
+    serviceOptions: ['Agente AI WhatsApp', 'Sito che converte', 'Gestionale su misura', 'Marketing e crescita Instagram', 'Altro'],
     message: 'Descrivi il tuo progetto',
     messagePlaceholder: 'Qual è la tua esigenza? Cosa vorresti realizzare?',
     submit: 'Invia Richiesta',

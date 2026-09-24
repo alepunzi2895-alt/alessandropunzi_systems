@@ -9,7 +9,7 @@ export const en: Dictionary = {
   },
   nav: { contact: 'Contact' },
   hero: {
-    tag: 'AI · WHATSAPP · IBIZA',
+    tag: "AI AGENTS · WEBSITES · MANAGEMENT APPS · MARKETING",
     headline: "Your business answers its customers.",
     headlineEmphasis: "Even at 4 AM.",
     subtitle: "AI agents on WhatsApp, websites and custom management software for hotels, restaurants and property managers.",
@@ -58,6 +58,18 @@ export const en: Dictionary = {
         priceLabel: 'from €2,500 setup + €149/month',
         cta: 'I want this',
       },
+      {
+        id: 'social-marketing',
+        name: "Marketing & Instagram Growth",
+        forWho: "For businesses that want to be found on Instagram and turn followers into customers.",
+        includes: [
+          "Strategy, content plan and content for your profile",
+          "Consistent posting and community management",
+          "Clear monthly report on results",
+        ],
+        priceLabel: 'from €490/month',
+        cta: 'I want this',
+      },
     ],
   },
   caseStudies: {
@@ -101,6 +113,16 @@ export const en: Dictionary = {
           { label: 'I want something similar', action: 'contact', presetService: 'Other' },
         ],
       },
+      {
+        id: 'vmscout',
+        name: 'VM Scout',
+        tag: "AI Marketing · Instagram Analytics",
+        problem: "Creating content for multiple brands takes strategy, visual direction and results analysis: hours of repeated work for every project.",
+        solution: "An AI marketing suite that turns a brief into strategy, content plan, posts and video storyboards, analyses the connected Instagram account and keeps a project memory that improves with every analysis.",
+        result: '',
+        tech: ['React', 'Claude AI', 'Instagram Analytics', 'Turso / libSQL'],
+        ctas: [{ label: "I want something similar", action: 'contact', presetService: "Marketing & Instagram Growth" }],
+      },
     ],
   },
   about: {
@@ -127,7 +149,7 @@ export const en: Dictionary = {
     phonePlaceholder: 'Your number',
     service: 'Service of interest',
     servicePlaceholder: 'Select a service',
-    serviceOptions: ['WhatsApp AI Agent', 'Website That Converts', 'Custom Booking System', 'Other'],
+    serviceOptions: ['WhatsApp AI Agent', 'Website That Converts', 'Custom Booking System', 'Marketing & Instagram Growth', 'Other'],
     message: 'Describe your project',
     messagePlaceholder: 'What do you need? What would you like to build?',
     submit: 'Send Request',

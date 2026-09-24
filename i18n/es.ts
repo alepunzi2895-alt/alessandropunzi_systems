@@ -9,7 +9,7 @@ export const es: Dictionary = {
   },
   nav: { contact: 'Contacto' },
   hero: {
-    tag: 'AI · WHATSAPP · IBIZA',
+    tag: "AGENTES IA · WEBS · SOFTWARE DE GESTIÓN · MARKETING",
     headline: "Tu negocio responde a sus clientes.",
     headlineEmphasis: "Incluso a las 4 de la madrugada.",
     subtitle: "Agentes de IA en WhatsApp, webs y software de gestión a medida para hoteles, restaurantes y property managers.",
@@ -58,6 +58,18 @@ export const es: Dictionary = {
         priceLabel: 'desde 2.500€ de setup + 149€/mes',
         cta: 'Quiero esto',
       },
+      {
+        id: 'social-marketing',
+        name: "Marketing y crecimiento en Instagram",
+        forWho: "Para negocios que quieren que los encuentren en Instagram y convertir seguidores en clientes.",
+        includes: [
+          "Estrategia, calendario editorial y contenidos para tu perfil",
+          "Publicación constante y gestión de la comunidad",
+          "Informe mensual de resultados, claro y sencillo",
+        ],
+        priceLabel: 'desde 490€/mes',
+        cta: 'Quiero esto',
+      },
     ],
   },
   caseStudies: {
@@ -101,6 +113,16 @@ export const es: Dictionary = {
           { label: 'Quiero algo similar', action: 'contact', presetService: 'Otro' },
         ],
       },
+      {
+        id: 'vmscout',
+        name: 'VM Scout',
+        tag: "Marketing con IA · Instagram Analytics",
+        problem: "Crear contenido para varias marcas exige estrategia, dirección visual y análisis de resultados: horas de trabajo repetidas en cada proyecto.",
+        solution: "Una suite de marketing con IA que a partir de un brief genera estrategia, calendario editorial, posts y storyboards de vídeo, analiza la cuenta de Instagram conectada y mantiene una memoria de proyecto que mejora con cada análisis.",
+        result: '',
+        tech: ['React', 'Claude AI', 'Instagram Analytics', 'Turso / libSQL'],
+        ctas: [{ label: "Quiero algo similar", action: 'contact', presetService: "Marketing y crecimiento en Instagram" }],
+      },
     ],
   },
   about: {
@@ -127,7 +149,7 @@ export const es: Dictionary = {
     phonePlaceholder: 'Tu número',
     service: 'Servicio de interés',
     servicePlaceholder: 'Selecciona un servicio',
-    serviceOptions: ['Agente IA de WhatsApp', 'Web que convierte', 'Gestión a medida', 'Otro'],
+    serviceOptions: ['Agente IA de WhatsApp', 'Web que convierte', 'Gestión a medida', 'Marketing y crecimiento en Instagram', 'Otro'],
     message: 'Cuéntame tu proyecto',
     messagePlaceholder: '¿Cuál es tu necesidad? ¿Qué quieres crear?',
     submit: 'Enviar Solicitud',
