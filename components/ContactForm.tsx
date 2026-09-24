@@ -10,16 +10,8 @@ export interface ContactFormData {
   prefix: string;
   phone: string;
   service: string;
-  budget: string;
   message: string;
 }
-
-const budgetOptions = [
-  { value: '500-2000', label: '€ 500 – € 2.000' },
-  { value: '2000-5000', label: '€ 2.000 – € 5.000' },
-  { value: '5000-10000', label: '€ 5.000 – € 10.000' },
-  { value: '10000+', label: '€ 10.000+' },
-];
 
 export default function ContactForm({
   dict,
@@ -87,18 +79,6 @@ export default function ContactForm({
             />
           </div>
           <div>
-            <label htmlFor="cf-email" className="block text-sm font-semibold text-gray-200 mb-2">{dict.contact.email}</label>
-            <input
-              id="cf-email"
-              type="email"
-              required
-              value={formData.email}
-              onChange={(e) => setFormData((f) => ({ ...f, email: e.target.value }))}
-              className="w-full px-4 py-3 bg-black border border-green-600/30 rounded text-white placeholder-gray-600"
-              placeholder={dict.contact.emailPlaceholder}
-            />
-          </div>
-          <div>
             <label htmlFor="cf-phone" className="block text-sm font-semibold text-gray-200 mb-2">{dict.contact.phone}</label>
             <div className="flex gap-2">
               <select
@@ -147,31 +127,26 @@ export default function ContactForm({
             </select>
           </div>
           <div>
-            <label htmlFor="cf-budget" className="block text-sm font-semibold text-gray-200 mb-2">{dict.contact.budget}</label>
-            <select
-              id="cf-budget"
-              value={formData.budget}
-              onChange={(e) => setFormData((f) => ({ ...f, budget: e.target.value }))}
-              className="w-full px-4 py-3 bg-black border border-green-600/30 rounded text-white"
-            >
-              <option value="">{dict.contact.budgetPlaceholder}</option>
-              {budgetOptions.map((opt) => (
-                <option key={opt.value} value={opt.value}>
-                  {opt.label}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label htmlFor="cf-message" className="block text-sm font-semibold text-gray-200 mb-2">{dict.contact.message}</label>
+            <label htmlFor="cf-message" className="block text-sm font-semibold text-gray-200 mb-2">{dict.contact.message} <span className="font-normal text-gray-400">({dict.contact.optional})</span></label>
             <textarea
               id="cf-message"
               value={formData.message}
               onChange={(e) => setFormData((f) => ({ ...f, message: e.target.value }))}
-              required
               rows={4}
               className="w-full px-4 py-3 bg-black border border-green-600/30 rounded text-white placeholder-gray-600 resize-none"
               placeholder={dict.contact.messagePlaceholder}
+            />
+          </div>
+          <div>
+            <label htmlFor="cf-email" className="block text-sm font-semibold text-gray-200 mb-2">{dict.contact.email} <span className="font-normal text-gray-400">({dict.contact.optional})</span></label>
+            <input
+              id="cf-email"
+              type="email"
+              autoComplete="email"
+              value={formData.email}
+              onChange={(e) => setFormData((f) => ({ ...f, email: e.target.value }))}
+              className="w-full px-4 py-3 bg-black border border-green-600/30 rounded text-white placeholder-gray-600"
+              placeholder={dict.contact.emailPlaceholder}
             />
           </div>
           <button

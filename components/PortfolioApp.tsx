@@ -26,7 +26,7 @@ export default function PortfolioApp({
   videoAvailability: Record<string, boolean>;
   projectImages: Record<string, SizedImage[]>;
 }) {
-  const [formData, setFormData] = useState({ name: '', email: '', prefix: '+39', phone: '', service: '', budget: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', prefix: '+39', phone: '', service: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [lightbox, setLightbox] = useState<{ id: string; index: number } | null>(null);
 
@@ -65,7 +65,7 @@ export default function PortfolioApp({
         setSubmitted(true);
         setTimeout(() => {
           setSubmitted(false);
-          setFormData({ name: '', email: '', prefix: '+39', phone: '', service: '', budget: '', message: '' });
+          setFormData({ name: '', email: '', prefix: '+39', phone: '', service: '', message: '' });
         }, 3000);
       }
     } catch (error) {

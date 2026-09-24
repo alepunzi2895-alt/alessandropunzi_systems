@@ -38,7 +38,13 @@ export default function About({ dict }: { dict: Dictionary }) {
         </div>
         <div>
           <h2 className="section-title text-4xl font-bold mb-6">{dict.about.title}</h2>
-          <p className="text-gray-300 leading-relaxed max-w-xl">{dict.about.bio}</p>
+          <div className="space-y-4 max-w-xl">
+            {dict.about.bio.map((paragraph, i) => (
+              <p key={i} className="text-gray-300 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </section>

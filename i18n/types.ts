@@ -63,6 +63,8 @@ export interface Dictionary {
   offers: {
     title: string;
     otherProject: string;
+    freeDemo: string;
+    freeDemoCta: string;
     packages: OfferPackage[];
   };
   caseStudies: {
@@ -73,7 +75,7 @@ export interface Dictionary {
   };
   about: {
     title: string;
-    bio: string;
+    bio: string[];
     photoAlt: string;
     initials: string;
   };
@@ -92,8 +94,6 @@ export interface Dictionary {
     service: string;
     servicePlaceholder: string;
     serviceOptions: string[];
-    budget: string;
-    budgetPlaceholder: string;
     message: string;
     messagePlaceholder: string;
     submit: string;
@@ -102,6 +102,7 @@ export interface Dictionary {
     bookCall: string;
     responsePromise: string;
     orLabel: string;
+    optional: string;
   };
   footer: {
     contactsLabel: string;

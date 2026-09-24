@@ -10,15 +10,17 @@ export const en: Dictionary = {
   nav: { contact: 'Contact' },
   hero: {
     tag: 'AI · WHATSAPP · IBIZA',
-    headline: 'Technology that works for you.',
-    headlineEmphasis: "Even when you're not there.",
-    subtitle: 'AI agents, websites and booking systems built for your business.',
+    headline: "Your business answers its customers.",
+    headlineEmphasis: "Even at 4 AM.",
+    subtitle: "AI agents on WhatsApp, websites and custom management software for hotels, restaurants and property managers.",
     ctaPrimary: 'Try the live agent',
     ctaSecondary: 'See the offers',
   },
   offers: {
     title: 'Offers',
     otherProject: 'Different project? Get in touch.',
+    freeDemo: "Free demo on your own business before you decide.",
+    freeDemoCta: "Book a call",
     packages: [
       {
         id: 'whatsapp-agent',
@@ -67,7 +69,7 @@ export const en: Dictionary = {
         id: 'ibizapartyagent',
         name: 'IbizaPartyAgent',
         tag: 'AI Agent · WhatsApp · Real-time',
-        problem: "Guests ask the same questions on WhatsApp over and over — times, prices, lineups — at any hour.",
+        problem: "Clubs get the same questions on WhatsApp every day: opening times, prices, line-ups. At any hour.",
         solution:
           'An AI agent replies in real time with events, lineups and guest list access for every club and date, no manual work needed.',
         result: '[[TODO: real data — e.g. messages handled per month, average response time]]',
@@ -103,7 +105,11 @@ export const en: Dictionary = {
   },
   about: {
     title: 'About Me',
-    bio: "I'm Alessandro Punzi, a Data Architect working on enterprise projects for an automotive multinational. I bring that same care and rigor to every client, from large companies to small local businesses. I speak Italian, English and Spanish.",
+    bio: [
+      "I'm Alessandro Punzi, a Data Architect. I design data and business intelligence systems for a multinational in the automotive sector: architectures that connect different systems, process large volumes of data and turn numbers into decisions for management.",
+      "With AP Systems I bring the same method to hotels, restaurants, property managers and independent professionals. AI agents that answer customers for you, management software that replaces spreadsheets and scattered messages, websites built to turn visits into enquiries.",
+      "I follow every project from analysis to launch: one point of contact, clear timelines, no hand-offs between agencies. I work in Italian, English and Spanish.",
+    ],
     photoAlt: 'Alessandro Punzi',
     initials: 'AP',
   },
@@ -112,7 +118,7 @@ export const en: Dictionary = {
   },
   contact: {
     title: 'Request a Quote',
-    subtitle: 'Fill out the form and receive a personalized proposal within 24 hours.',
+    subtitle: "Fill out the form and receive a personalized proposal.",
     name: 'Name',
     namePlaceholder: 'Your name',
     email: 'Email',
@@ -122,16 +128,15 @@ export const en: Dictionary = {
     service: 'Service of interest',
     servicePlaceholder: 'Select a service',
     serviceOptions: ['WhatsApp AI Agent', 'Website That Converts', 'Custom Booking System', 'Other'],
-    budget: 'Approximate budget',
-    budgetPlaceholder: 'Select a range',
     message: 'Describe your project',
     messagePlaceholder: 'What do you need? What would you like to build?',
     submit: 'Send Request',
-    success: "✓ Request sent! I'll get back to you within 24 hours.",
+    success: "✓ Request sent! I'll get back to you shortly.",
     whatsapp: 'Message me on WhatsApp',
     bookCall: 'Book a 15-min call',
     responsePromise: 'I reply within 24h.',
     orLabel: 'or reach me directly',
+    optional: 'optional',
   },
   footer: {
     contactsLabel: 'Contact',

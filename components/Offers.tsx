@@ -2,6 +2,7 @@
 
 import { ChevronRight } from 'lucide-react';
 import type { Dictionary } from '@/i18n';
+import { BOOKING_CALL_URL } from '@/lib/config';
 
 export default function Offers({
   dict,
@@ -45,7 +46,18 @@ export default function Offers({
             </div>
           ))}
         </div>
-        <p className="text-sm text-gray-400 mt-10">
+        <p className="text-gray-300 mt-10 flex flex-wrap items-center gap-x-3 gap-y-2">
+          <span>{dict.offers.freeDemo}</span>
+          <a
+            href={BOOKING_CALL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link inline-flex items-center gap-1 text-green-400 hover:text-green-300 font-semibold"
+          >
+            {dict.offers.freeDemoCta} <ChevronRight className="w-4 h-4" />
+          </a>
+        </p>
+        <p className="text-sm text-gray-400 mt-4">
           <a href="#contact" onClick={() => onSelectPackage('')} className="nav-link hover:text-green-400">
             {dict.offers.otherProject}
           </a>
