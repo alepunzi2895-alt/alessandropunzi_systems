@@ -3,10 +3,9 @@
 // width/height without a hand-maintained table.
 export const projectImagePaths: Record<string, string[]> = {
   ibizapartyagent: [
-    '/projects/ibizapartyagent/IMG_5676.jpg',
-    '/projects/ibizapartyagent/IMG_5677.jpg',
-    '/projects/ibizapartyagent/IMG_5678.jpg',
-    '/projects/ibizapartyagent/IMG_5679.jpg',
+    '/projects/ibizapartyagent/img-01.jpg',
+    '/projects/ibizapartyagent/img-02.jpg',
+    '/projects/ibizapartyagent/img-03.jpg',
   ],
   auraibiza: [
     '/projects/auraibiza/img-01.jpg',
