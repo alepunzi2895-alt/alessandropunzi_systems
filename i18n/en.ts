@@ -2,17 +2,17 @@ import type { Dictionary } from './types';
 
 export const en: Dictionary = {
   meta: {
-    title: 'AP Systems — Control rooms, AI agents and custom platforms for your business',
+    title: 'AP Systems — AI agents, websites, custom management software and marketing',
     description:
-      'One control room for properties, sites and customers anywhere in the world. AI agents and custom platforms on a monthly licence.',
+      'AI agents that answer your customers, websites that convert, custom management software and marketing, for companies and owners anywhere in the world. Monthly licence.',
     ogLocale: 'en_US',
   },
   nav: { contact: 'Contact' },
   hero: {
-    tag: 'CONTROL ROOM · AI AGENTS · CUSTOM PLATFORMS',
-    headline: 'All your properties, anywhere in the world.',
-    headlineEmphasis: 'Under control from a single screen.',
-    subtitle: 'Custom platforms and AI agents for owners and companies running properties, sites and customers across cities and countries. Monthly licence, scaled to the number of users.',
+    tag: 'AI AGENTS · WEBSITES · MANAGEMENT APPS · MARKETING',
+    headline: 'Your business answers its customers.',
+    headlineEmphasis: 'Even at 4 AM.',
+    subtitle: 'AI agents, websites, custom management software and marketing for companies and owners who want customers, sites and properties under control, anywhere in the world.',
     ctaPrimary: 'Request a demo',
     ctaSecondary: 'See the solutions',
   },
@@ -25,17 +25,6 @@ export const en: Dictionary = {
     freeDemoCta: 'Book a call',
     packages: [
       {
-        id: 'control-room',
-        name: 'Property control room',
-        forWho: 'For owners, family offices and managers with properties in several cities or countries.',
-        includes: [
-          'Every property in one dashboard: occupancy, revenue, costs',
-          'Maintenance, tickets and local teams tracked in real time',
-          'Role-based access and automatic import from Airbnb and Booking',
-        ],
-        cta: 'Request a quote',
-      },
-      {
         id: 'ai-agent',
         name: 'AI customer agent',
         forWho: 'For companies handling hundreds of customer requests a day on WhatsApp, email or the web.',
@@ -47,24 +36,35 @@ export const en: Dictionary = {
         cta: 'Request a quote',
       },
       {
-        id: 'custom-platform',
-        name: 'Custom platform',
-        forWho: 'For companies in any industry still working across spreadsheets and disconnected systems.',
+        id: 'website',
+        name: 'Custom website',
+        forWho: 'For companies and brands that want an online presence that matches their level, built to bring in enquiries.',
         includes: [
-          'Processes, data and existing systems brought together in one place',
-          'Dashboards and KPIs for management, updated automatically',
-          'Multi-user, multi-site, multilingual',
+          'Fast multilingual website, optimised for mobile',
+          'WhatsApp contact and enquiries connected to your management software',
+          'Ongoing updates and maintenance',
         ],
         cta: 'Request a quote',
       },
       {
-        id: 'web-marketing',
-        name: 'Website & marketing',
-        forWho: 'For brands that want an online presence that matches their level and turns visits and followers into customers.',
+        id: 'management',
+        name: 'Custom management software',
+        forWho: 'For owners with properties in several cities or countries, and companies in any industry with sites and processes to keep under control.',
         includes: [
-          'Fast multilingual website, built to bring in enquiries',
-          'Instagram strategy and content, with performance analysis',
-          'Clear monthly report on what works',
+          'One control room: properties, sites, customers, revenue and costs',
+          'Maintenance, tickets and local teams tracked in real time',
+          'Integration with your systems, Airbnb, Booking and other channels',
+        ],
+        cta: 'Request a quote',
+      },
+      {
+        id: 'marketing',
+        name: 'Marketing & growth',
+        forWho: 'For companies that want to be found and turn visits and followers into customers.',
+        includes: [
+          'Strategy, editorial plan and content for Instagram',
+          'Consistent publishing and community management',
+          'Clear monthly report on results',
         ],
         cta: 'Request a quote',
       },
@@ -84,7 +84,7 @@ export const en: Dictionary = {
           'One platform for the whole portfolio: short and long-term bookings, accounting, guest CRM and automatic import from Airbnb and Booking, with separate access for every role and every client.',
         result: '',
         tech: ['Vanilla JS', 'Turso / libSQL', 'Multi-tenant', 'i18n'],
-        ctas: [{ label: 'Request a demo', action: 'contact', presetService: 'Property control room' }],
+        ctas: [{ label: 'Request a demo', action: 'contact', presetService: 'Custom management software' }],
       },
       {
         id: 'ibizapartyagent',
@@ -108,7 +108,7 @@ export const en: Dictionary = {
         tech: ['Next.js 14', 'Turso / libSQL', 'NextAuth', 'Leaflet'],
         ctas: [
           { label: 'See it on Instagram', action: 'external', url: 'https://instagram.com/_aura_ibiza_' },
-          { label: 'I want something similar', action: 'contact', presetService: 'Custom platform' },
+          { label: 'I want something similar', action: 'contact', presetService: 'Custom management software' },
         ],
       },
       {
@@ -120,7 +120,7 @@ export const en: Dictionary = {
           'An AI marketing suite that turns a brief into strategy, content plan, posts and video storyboards, analyses the connected Instagram account and keeps a project memory that improves with every analysis.',
         result: '',
         tech: ['React', 'Claude AI', 'Instagram Analytics', 'Turso / libSQL'],
-        ctas: [{ label: 'I want something similar', action: 'contact', presetService: 'Website & marketing' }],
+        ctas: [{ label: 'I want something similar', action: 'contact', presetService: 'Marketing & growth' }],
       },
       {
         id: 'whitesoulibiza',
@@ -131,7 +131,7 @@ export const en: Dictionary = {
           'Multi-page showcase site with an editorial design, full-screen galleries, translations in 5 languages and direct WhatsApp contact from every page.',
         result: '',
         tech: ['HTML5', 'CSS3', 'Vanilla JS', 'Turso / libSQL', 'i18n'],
-        ctas: [{ label: 'I want a site like this', action: 'contact', presetService: 'Website & marketing' }],
+        ctas: [{ label: 'I want a site like this', action: 'contact', presetService: 'Custom website' }],
       },
     ],
   },
@@ -159,7 +159,7 @@ export const en: Dictionary = {
     phonePlaceholder: 'Your number',
     service: 'Service of interest',
     servicePlaceholder: 'Select a service',
-    serviceOptions: ['Property control room', 'AI customer agent', 'Custom platform', 'Website & marketing', 'Other'],
+    serviceOptions: ['AI customer agent', 'Custom website', 'Custom management software', 'Marketing & growth', 'Other'],
     message: 'Describe your project',
     messagePlaceholder: 'How many properties, sites or customers do you manage? What would you like to keep under control?',
     submit: 'Send Request',

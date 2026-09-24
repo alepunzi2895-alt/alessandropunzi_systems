@@ -2,17 +2,17 @@ import type { Dictionary } from './types';
 
 export const es: Dictionary = {
   meta: {
-    title: 'AP Systems — Centros de control, agentes de IA y plataformas a medida para tu negocio',
+    title: 'AP Systems — Agentes de IA, webs, software de gestión a medida y marketing',
     description:
-      'Un único centro de control para inmuebles, sedes y clientes en cualquier parte del mundo. Agentes de IA y plataformas a medida con licencia mensual.',
+      'Agentes de IA que responden a tus clientes, webs que convierten, software de gestión a medida y marketing, para empresas y propietarios en cualquier parte del mundo. Con licencia mensual.',
     ogLocale: 'es_ES',
   },
   nav: { contact: 'Contacto' },
   hero: {
-    tag: 'CENTRO DE CONTROL · AGENTES IA · PLATAFORMAS A MEDIDA',
-    headline: 'Todas tus propiedades, en cualquier parte del mundo.',
-    headlineEmphasis: 'Bajo control desde una sola pantalla.',
-    subtitle: 'Plataformas a medida y agentes de IA para propietarios y empresas que gestionan inmuebles, sedes y clientes en varias ciudades y países. Con licencia mensual, escalable según el número de usuarios.',
+    tag: 'AGENTES IA · WEBS · SOFTWARE DE GESTIÓN · MARKETING',
+    headline: 'Tu negocio responde a sus clientes.',
+    headlineEmphasis: 'Incluso a las 4 de la madrugada.',
+    subtitle: 'Agentes de IA, webs, software de gestión a medida y marketing para empresas y propietarios que quieren tener clientes, sedes e inmuebles bajo control, en cualquier parte del mundo.',
     ctaPrimary: 'Solicita una demo',
     ctaSecondary: 'Ver las soluciones',
   },
@@ -25,17 +25,6 @@ export const es: Dictionary = {
     freeDemoCta: 'Reserva una llamada',
     packages: [
       {
-        id: 'control-room',
-        name: 'Centro de control inmobiliario',
-        forWho: 'Para propietarios, family offices y gestores con inmuebles en varias ciudades o países.',
-        includes: [
-          'Todos los inmuebles en un único panel: ocupación, ingresos, costes',
-          'Mantenimiento, incidencias y equipos locales bajo control en tiempo real',
-          'Accesos por rol e importación automática desde Airbnb y Booking',
-        ],
-        cta: 'Solicita un presupuesto',
-      },
-      {
         id: 'ai-agent',
         name: 'Agente IA para clientes',
         forWho: 'Para empresas que reciben cada día cientos de solicitudes por WhatsApp, email o web.',
@@ -47,24 +36,35 @@ export const es: Dictionary = {
         cta: 'Solicita un presupuesto',
       },
       {
-        id: 'custom-platform',
-        name: 'Plataforma a medida',
-        forWho: 'Para empresas de cualquier sector que aún trabajan entre hojas de Excel y sistemas desconectados.',
+        id: 'website',
+        name: 'Web a medida',
+        forWho: 'Para empresas y marcas que quieren una presencia online a la altura, pensada para generar contactos.',
         includes: [
-          'Procesos, datos y sistemas existentes integrados en un solo lugar',
-          'Paneles y KPI para la dirección, actualizados automáticamente',
-          'Multiusuario, multisede, multilingüe',
+          'Web multilingüe, rápida y optimizada para móvil',
+          'Contacto por WhatsApp y solicitudes conectadas a tu gestión',
+          'Actualizaciones y mantenimiento continuos',
         ],
         cta: 'Solicita un presupuesto',
       },
       {
-        id: 'web-marketing',
-        name: 'Web y marketing',
-        forWho: 'Para marcas que quieren una presencia online a la altura y convertir visitas y seguidores en clientes.',
+        id: 'management',
+        name: 'Gestión a medida',
+        forWho: 'Para propietarios con inmuebles en varias ciudades o países y empresas de cualquier sector con sedes y procesos que tener bajo control.',
         includes: [
-          'Web multilingüe y rápida, pensada para generar contactos',
-          'Estrategia y contenidos de Instagram con análisis de resultados',
-          'Informe mensual claro sobre lo que funciona',
+          'Un único centro de control: inmuebles, sedes, clientes, ingresos y costes',
+          'Mantenimiento, incidencias y equipos locales bajo control en tiempo real',
+          'Integración con tus sistemas, Airbnb, Booking y otros canales',
+        ],
+        cta: 'Solicita un presupuesto',
+      },
+      {
+        id: 'marketing',
+        name: 'Marketing y crecimiento',
+        forWho: 'Para empresas que quieren que las encuentren y convertir visitas y seguidores en clientes.',
+        includes: [
+          'Estrategia, plan editorial y contenidos para Instagram',
+          'Publicación constante y gestión de la comunidad',
+          'Informe mensual claro sobre los resultados',
         ],
         cta: 'Solicita un presupuesto',
       },
@@ -84,7 +84,7 @@ export const es: Dictionary = {
           'Una única plataforma para toda la cartera: reservas cortas y largas, contabilidad, CRM de huéspedes e importación automática desde Airbnb y Booking, con accesos separados para cada rol y cada cliente.',
         result: '',
         tech: ['Vanilla JS', 'Turso / libSQL', 'Multi-tenant', 'i18n'],
-        ctas: [{ label: 'Solicita una demo', action: 'contact', presetService: 'Centro de control inmobiliario' }],
+        ctas: [{ label: 'Solicita una demo', action: 'contact', presetService: 'Gestión a medida' }],
       },
       {
         id: 'ibizapartyagent',
@@ -108,7 +108,7 @@ export const es: Dictionary = {
         tech: ['Next.js 14', 'Turso / libSQL', 'NextAuth', 'Leaflet'],
         ctas: [
           { label: 'Míralo en Instagram', action: 'external', url: 'https://instagram.com/_aura_ibiza_' },
-          { label: 'Quiero algo parecido', action: 'contact', presetService: 'Plataforma a medida' },
+          { label: 'Quiero algo parecido', action: 'contact', presetService: 'Gestión a medida' },
         ],
       },
       {
@@ -120,7 +120,7 @@ export const es: Dictionary = {
           'Una suite de marketing con IA que a partir de un brief genera estrategia, calendario editorial, posts y storyboards de vídeo, analiza la cuenta de Instagram conectada y mantiene una memoria de proyecto que mejora con cada análisis.',
         result: '',
         tech: ['React', 'Claude AI', 'Instagram Analytics', 'Turso / libSQL'],
-        ctas: [{ label: 'Quiero algo parecido', action: 'contact', presetService: 'Web y marketing' }],
+        ctas: [{ label: 'Quiero algo parecido', action: 'contact', presetService: 'Marketing y crecimiento' }],
       },
       {
         id: 'whitesoulibiza',
@@ -131,7 +131,7 @@ export const es: Dictionary = {
           'Web multi-página con diseño editorial, galerías a pantalla completa, traducciones en 5 idiomas y contacto directo por WhatsApp desde cada página.',
         result: '',
         tech: ['HTML5', 'CSS3', 'Vanilla JS', 'Turso / libSQL', 'i18n'],
-        ctas: [{ label: 'Quiero una web así', action: 'contact', presetService: 'Web y marketing' }],
+        ctas: [{ label: 'Quiero una web así', action: 'contact', presetService: 'Web a medida' }],
       },
     ],
   },
@@ -159,7 +159,7 @@ export const es: Dictionary = {
     phonePlaceholder: 'Tu número',
     service: 'Servicio de interés',
     servicePlaceholder: 'Selecciona un servicio',
-    serviceOptions: ['Centro de control inmobiliario', 'Agente IA para clientes', 'Plataforma a medida', 'Web y marketing', 'Otro'],
+    serviceOptions: ['Agente IA para clientes', 'Web a medida', 'Gestión a medida', 'Marketing y crecimiento', 'Otro'],
     message: 'Cuéntame tu proyecto',
     messagePlaceholder: '¿Cuántos inmuebles, sedes o clientes gestionas? ¿Qué te gustaría tener bajo control?',
     submit: 'Enviar Solicitud',
