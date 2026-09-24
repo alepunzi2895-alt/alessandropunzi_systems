@@ -158,7 +158,6 @@ export const es: Dictionary = {
     bookCall: 'Reserva una llamada de 15 min',
     responsePromise: 'Respondo en 24h.',
     orLabel: 'o contáctame directamente',
-    optional: 'opcional',
   },
   footer: {
     contactsLabel: 'Contacto',

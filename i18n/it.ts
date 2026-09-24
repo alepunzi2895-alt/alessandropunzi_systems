@@ -158,7 +158,6 @@ export const it: Dictionary = {
     bookCall: 'Prenota call 15 min',
     responsePromise: 'Rispondo entro 24h.',
     orLabel: 'oppure contattami direttamente',
-    optional: 'facoltativo',
   },
   footer: {
     contactsLabel: 'Contatti',

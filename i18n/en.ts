@@ -158,7 +158,6 @@ export const en: Dictionary = {
     bookCall: 'Book a 15-min call',
     responsePromise: 'I reply within 24h.',
     orLabel: 'or reach me directly',
-    optional: 'optional',
   },
   footer: {
     contactsLabel: 'Contact',

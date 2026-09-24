@@ -26,29 +26,19 @@ export async function POST(req: NextRequest) {
   const message = str(body.message);
   const lang = str(body.lang) || 'it';
 
-  // Required: name + WhatsApp number. Email and message are optional.
-  if (!name || !phone) {
+  // All form fields are required.
+  if (!name || !phone || !email || !service || !message) {
     return NextResponse.json({ error: 'Campi obbligatori mancanti' }, { status: 400 });
   }
 
   const fullPhone = `${prefix} ${phone}`.trim();
   const phoneDigits = fullPhone.replace(/\D/g, '');
 
-  // contacts.email is UNIQUE NOT NULL: without an email, the contact is keyed
-  // by a synthetic "whatsapp:+<digits>" value so no schema migration is needed.
-  const contactKey = email || `whatsapp:+${phoneDigits}`;
-
   // ── 1. Upsert contact ──────────────────────────────────────────────────────
-  let existingContact = await db.execute({
+  const existingContact = await db.execute({
     sql: 'SELECT id, total_quotes FROM contacts WHERE email = ?',
-    args: [contactKey],
+    args: [email],
   });
-  if (existingContact.rows.length === 0 && !email) {
-    existingContact = await db.execute({
-      sql: 'SELECT id, total_quotes FROM contacts WHERE phone = ?',
-      args: [fullPhone],
-    });
-  }
 
   let contactId: number;
 
@@ -67,7 +57,7 @@ export async function POST(req: NextRequest) {
     const res = await db.execute({
       sql: `INSERT INTO contacts (name, email, phone, preferred_lang, source, total_quotes)
             VALUES (?, ?, ?, ?, 'form', 1)`,
-      args: [name, contactKey, fullPhone, lang],
+      args: [name, email, fullPhone, lang],
     });
     contactId = Number(res.lastInsertRowid);
   }
@@ -76,7 +66,7 @@ export async function POST(req: NextRequest) {
   await db.execute({
     sql: `INSERT INTO quotes (contact_id, name, email, phone, service, budget, message, lang)
           VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-    args: [contactId, name, email, fullPhone, service || null, budget || null, message, lang],
+    args: [contactId, name, email, fullPhone, service, budget || null, message, lang],
   });
 
   // ── 3. Send email via Resend ───────────────────────────────────────────────
@@ -87,7 +77,7 @@ export async function POST(req: NextRequest) {
   const { error } = await resend.emails.send({
     from: 'AP Systems <onboarding@resend.dev>',
     to: 'ale.punzi2895@gmail.com',
-    ...(email ? { replyTo: email } : {}),
+    replyTo: email,
     subject: `Nuova richiesta preventivo — ${name}`,
     html: `
       <div style="font-family:sans-serif;max-width:600px;margin:0 auto;background:#0a0a0a;color:#e5e7eb;padding:32px;border-radius:12px;border:1px solid rgba(34,197,94,0.2);">
@@ -95,14 +85,14 @@ export async function POST(req: NextRequest) {
         <table style="width:100%;border-collapse:collapse;">
           <tr><td style="padding:10px 0;color:#9ca3af;width:140px;font-size:14px;">Nome</td><td style="padding:10px 0;font-weight:600;">${escapeHtml(name)}</td></tr>
           ${row('WhatsApp', link(`https://wa.me/${phoneDigits}`, fullPhone))}
-          ${row('Email', email ? link(`mailto:${email}`, email) : '—')}
-          ${row('Servizio', service ? escapeHtml(service) : '—')}
+          ${row('Email', link(`mailto:${email}`, email))}
+          ${row('Servizio', escapeHtml(service))}
           ${budget ? row('Budget', escapeHtml(budget)) : ''}
           ${row('Lingua', escapeHtml(lang.toUpperCase()))}
         </table>
         <div style="margin-top:24px;padding:20px;background:rgba(34,197,94,0.05);border-left:3px solid #22c55e;border-radius:4px;">
           <p style="color:#9ca3af;font-size:14px;margin:0 0 8px;">Messaggio</p>
-          <p style="margin:0;line-height:1.6;">${message ? escapeHtml(message).replace(/\n/g, '<br/>') : '—'}</p>
+          <p style="margin:0;line-height:1.6;">${escapeHtml(message).replace(/\n/g, '<br/>')}</p>
         </div>
         <p style="margin-top:32px;font-size:12px;color:#4b5563;text-align:center;">AP Systems · ale.punzi2895@gmail.com</p>
       </div>

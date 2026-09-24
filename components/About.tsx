@@ -24,13 +24,13 @@ export default function About({ dict }: { dict: Dictionary }) {
           {photoFailed ? (
             <span className="mono text-2xl text-green-500">{dict.about.initials}</span>
           ) : (
-            // TODO: /public/me.jpg
             <Image
               ref={imgRef}
               src="/me.jpg"
               alt={dict.about.photoAlt}
-              width={128}
-              height={128}
+              width={256}
+              height={256}
+              sizes="128px"
               onError={() => setPhotoFailed(true)}
               className="w-full h-full object-cover"
             />

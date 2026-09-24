@@ -102,7 +102,6 @@ export interface Dictionary {
     bookCall: string;
     responsePromise: string;
     orLabel: string;
-    optional: string;
   };
   footer: {
     contactsLabel: string;
