@@ -123,6 +123,17 @@ export const es: Dictionary = {
         tech: ['React', 'Claude AI', 'Instagram Analytics', 'Turso / libSQL'],
         ctas: [{ label: "Quiero algo similar", action: 'contact', presetService: "Marketing y crecimiento en Instagram" }],
       },
+      {
+        id: 'whitesoulibiza',
+        name: 'White Soul Ibiza',
+        tag: 'Web corporativa · Multilingüe · Concierge',
+        problem: 'Un servicio de concierge y eventos de lujo necesita una presencia online a la altura de su clientela, que hable con huéspedes de toda Europa.',
+        solution:
+          'Web multi-página con diseño editorial, galerías a pantalla completa, traducciones en 5 idiomas y contacto directo por WhatsApp desde cada página.',
+        result: '',
+        tech: ['HTML5', 'CSS3', 'Vanilla JS', 'Turso / libSQL', 'i18n'],
+        ctas: [{ label: 'Quiero una web así', action: 'contact', presetService: 'Web que convierte' }],
+      },
     ],
   },
   about: {
