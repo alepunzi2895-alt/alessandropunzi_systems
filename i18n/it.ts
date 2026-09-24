@@ -2,7 +2,7 @@ import type { Dictionary } from './types';
 
 export const it: Dictionary = {
   meta: {
-    title: 'AP Systems — Agenti AI, siti e gestionali per business a Ibiza',
+    title: 'AP Systems — Agenti AI personalizzati, Siti Vetrina e Applicazioni Gestionali su misura',
     description:
       'Agenti AI su WhatsApp, siti che convertono e gestionali su misura per attività e professionisti a Ibiza.',
     ogLocale: 'it_IT',
@@ -14,7 +14,6 @@ export const it: Dictionary = {
     headlineEmphasis: 'Anche quando tu non ci sei.',
     subtitle: 'Agenti AI, siti e gestionali su misura per il tuo business.',
     ctaPrimary: "Prova l'agente live",
-    ctaPrimaryPrefill: "Cosa c'è stasera?",
     ctaSecondary: 'Vedi le offerte',
   },
   offers: {
@@ -73,7 +72,7 @@ export const it: Dictionary = {
           'Un agente AI risponde in tempo reale con eventi, lineup e guest list per ogni club e ogni data, senza intervento manuale.',
         result: '[[TODO: dato reale — es. messaggi gestiti al mese, tempo medio di risposta]]',
         tech: ['Claude AI', 'WhatsApp', 'Real-time Data', 'Web Scraping'],
-        ctas: [{ label: 'Prova su WhatsApp', action: 'whatsapp' }],
+        ctas: [{ label: 'Prova la demo', action: 'demo' }],
       },
       {
         id: 'conciergeflow',
@@ -131,7 +130,6 @@ export const it: Dictionary = {
     success: '✓ Richiesta inviata! Ti contatterò entro 24 ore.',
     whatsapp: 'Scrivimi su WhatsApp',
     bookCall: 'Prenota call 15 min',
-    bookCallSoon: 'Link in arrivo',
     responsePromise: 'Rispondo entro 24h.',
     orLabel: 'oppure contattami direttamente',
   },
@@ -139,14 +137,38 @@ export const it: Dictionary = {
     contactsLabel: 'Contatti',
     copyrightTemplate: '© {year} Alessandro Punzi — Tutti i diritti riservati.',
   },
-  chat: {
-    title: 'Assistente AI',
-    subtitle: 'Demo dell\'Agente AI WhatsApp',
-    greeting: 'Ciao! Chiedimi pure di servizi, prezzi indicativi o tempi di consegna.',
-    placeholder: 'Scrivi un messaggio...',
-    openLabel: 'Apri la chat con l\'assistente AI',
-    closeLabel: 'Chiudi la chat',
+  demo: {
+    title: "Prova l'agente",
+    subtitle: 'Lo stesso agente, sul WhatsApp del tuo business.',
+    demoBadge: 'Business dimostrativo',
+    demoNote: 'Dati inventati a scopo dimostrativo.',
+    assistantName: 'Assistente AP Systems',
+    status: 'online',
+    typing: 'sta scrivendo…',
+    placeholder: 'Scrivi un messaggio…',
     sendLabel: 'Invia',
-    errorMessage: 'Qualcosa non ha funzionato. Scrivimi su WhatsApp per una risposta rapida.',
+    remainingTemplate: '{n} messaggi rimasti',
+    errorMessage: "Scusa, non sono riuscito a rispondere. Riprova tra qualche secondo.",
+    rateLimitedMessage: 'Troppi messaggi in poco tempo. Attendi un minuto e riprova.',
+    limitTitle: 'Ti è piaciuto? Lo configuro per il tuo business.',
+    limitCta: 'Prenota una call di 15 min',
+    restart: 'Ricomincia',
+    scenarios: {
+      restaurant: {
+        label: 'Ristorante',
+        greeting: "Ciao! Sono l'assistente di {business}. Posso aiutarti con prenotazioni, menù e orari.",
+        quickReplies: ['Avete un tavolo per 4 stasera?', 'Avete un menù vegetariano?', 'Quali sono gli orari di apertura?'],
+      },
+      villa: {
+        label: 'Villa / affitti',
+        greeting: "Ciao! Sono l'assistente di {business}. Chiedimi disponibilità, prezzi e servizi della villa.",
+        quickReplies: ['È libera dal 10 al 17 ottobre?', 'Quanti ospiti può ospitare?', "Offrite il transfer dall'aeroporto?"],
+      },
+      club: {
+        label: 'Club / eventi',
+        greeting: "Ciao! Sono l'assistente di {business}. Chiedimi lineup, biglietti e tavoli VIP.",
+        quickReplies: ['Chi suona sabato?', 'Quanto costa un tavolo VIP?', 'A che ora aprite?'],
+      },
+    },
   },
 };

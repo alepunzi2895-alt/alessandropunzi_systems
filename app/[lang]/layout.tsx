@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import { translations, supportedLangs, defaultLang, isSupportedLang, type Lang } from '@/i18n';
+import { SITE_URL } from '@/lib/config';
 import '../globals.css';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -30,31 +32,26 @@ export async function generateMetadata({
   const lang: Lang = isSupportedLang(rawLang) ? rawLang : defaultLang;
   const dict = translations[lang];
 
-  const siteUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
-
   return {
-    metadataBase: new URL(siteUrl),
+    metadataBase: new URL(SITE_URL),
     title: dict.meta.title,
     description: dict.meta.description,
     alternates: {
       canonical: `/${lang}`,
-      languages: { it: '/it', en: '/en', es: '/es' },
+      languages: { it: '/it', en: '/en', es: '/es', 'x-default': '/en' },
     },
     openGraph: {
+      siteName: 'AP Systems',
       title: dict.meta.title,
       description: dict.meta.description,
       locale: dict.meta.ogLocale,
       url: `/${lang}`,
       type: 'website',
-      // TODO: /public/og.jpg 1200x630
-      images: ['/og.jpg'],
     },
     twitter: {
       card: 'summary_large_image',
       title: dict.meta.title,
       description: dict.meta.description,
-      // TODO: /public/og.jpg 1200x630
-      images: ['/og.jpg'],
     },
   };
 }
@@ -71,7 +68,10 @@ export default async function LangLayout({
 
   return (
     <html lang={lang} className={`${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

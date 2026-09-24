@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { ChevronRight, ChevronLeft, X } from 'lucide-react';
 import type { Lang } from '@/i18n';
 import { translations } from '@/i18n';
-import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import type { SizedImage } from '@/lib/imageSize';
 import Nav from './Nav';
 import Hero from './Hero';
@@ -15,7 +14,7 @@ import About from './About';
 import Testimonials from './Testimonials';
 import ContactForm from './ContactForm';
 import Footer from './Footer';
-import ChatWidget from './ChatWidget';
+import DemoChat from './DemoChat';
 import { testimonials } from '@/data/testimonials';
 
 export default function PortfolioApp({
@@ -33,7 +32,6 @@ export default function PortfolioApp({
 
   const c = translations[lang];
   const selectPackage = (name: string) => setFormData((f) => ({ ...f, service: name }));
-  const whatsappHref = buildWhatsAppUrl(c.hero.ctaPrimaryPrefill);
 
   const lightboxImages = lightbox ? (projectImages[lightbox.id] ?? []) : [];
 
@@ -250,13 +248,14 @@ export default function PortfolioApp({
       <main>
         <Hero dict={c} />
 
+        <DemoChat dict={c} lang={lang} />
+
         <Offers dict={c} onSelectPackage={selectPackage} />
 
         <CaseStudies
           dict={c}
           projectImages={projectImages}
           videoAvailability={videoAvailability}
-          whatsappHref={whatsappHref}
           onOpenLightbox={(id) => setLightbox({ id, index: 0 })}
           onSelectPackage={selectPackage}
         />
@@ -321,8 +320,6 @@ export default function PortfolioApp({
       </main>
 
       <Footer dict={c} />
-
-      <ChatWidget dict={c} lang={lang} />
     </div>
   );
 }

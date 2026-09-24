@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ChevronRight, Maximize2 } from 'lucide-react';
 import type { CaseStudyCopy, Dictionary } from '@/i18n';
 import type { SizedImage } from '@/lib/imageSize';
+import { isRenderable } from '@/lib/content';
 
 export default function CaseStudy({
   project,
@@ -11,7 +12,6 @@ export default function CaseStudy({
   hasVideo,
   labels,
   galleryHint,
-  whatsappHref,
   onOpenLightbox,
   onSelectPackage,
 }: {
@@ -20,7 +20,6 @@ export default function CaseStudy({
   hasVideo: boolean;
   labels: Dictionary['caseStudies']['labels'];
   galleryHint: string;
-  whatsappHref: string;
   onOpenLightbox: () => void;
   onSelectPackage: (packageName: string) => void;
 }) {
@@ -77,29 +76,27 @@ export default function CaseStudy({
         </div>
 
         <div className="space-y-4">
-          <div>
-            <p className="text-xs uppercase tracking-widest text-gray-400 mono mb-1">{labels.problem}</p>
-            <p className="text-gray-300 leading-relaxed">{project.problem}</p>
-          </div>
-          <div>
-            <p className="text-xs uppercase tracking-widest text-gray-400 mono mb-1">{labels.solution}</p>
-            <p className="text-gray-300 leading-relaxed">{project.solution}</p>
-          </div>
-          <div>
-            <p className="text-xs uppercase tracking-widest text-gray-400 mono mb-1">{labels.result}</p>
-            <p className="text-gray-300 leading-relaxed">{project.result}</p>
-          </div>
+          {[
+            { label: labels.problem, text: project.problem },
+            { label: labels.solution, text: project.solution },
+            { label: labels.result, text: project.result },
+          ]
+            .filter((block) => isRenderable(block.text))
+            .map((block) => (
+              <div key={block.label}>
+                <p className="text-xs uppercase tracking-widest text-gray-400 mono mb-1">{block.label}</p>
+                <p className="text-gray-300 leading-relaxed">{block.text}</p>
+              </div>
+            ))}
         </div>
 
         <div className="flex flex-wrap gap-3">
           {project.ctas.map((cta) => {
-            if (cta.action === 'whatsapp') {
+            if (cta.action === 'demo') {
               return (
                 <a
                   key={cta.label}
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#demo"
                   className="btn-primary inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-black font-semibold rounded"
                 >
                   {cta.label} <ChevronRight className="w-4 h-4" />

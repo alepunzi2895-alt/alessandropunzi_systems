@@ -21,7 +21,7 @@ export interface PortfolioProjectCopy {
 
 export interface CaseStudyCta {
   label: string;
-  action: 'whatsapp' | 'contact' | 'external';
+  action: 'demo' | 'contact' | 'external';
   url?: string;
   presetService?: string;
 }
@@ -35,6 +35,12 @@ export interface CaseStudyCopy {
   result: string;
   tech: string[];
   ctas: CaseStudyCta[];
+}
+
+export interface DemoScenarioCopy {
+  label: string;
+  greeting: string;
+  quickReplies: string[];
 }
 
 export interface Dictionary {
@@ -52,7 +58,6 @@ export interface Dictionary {
     headlineEmphasis: string;
     subtitle: string;
     ctaPrimary: string;
-    ctaPrimaryPrefill: string;
     ctaSecondary: string;
   };
   offers: {
@@ -95,7 +100,6 @@ export interface Dictionary {
     success: string;
     whatsapp: string;
     bookCall: string;
-    bookCallSoon: string;
     responsePromise: string;
     orLabel: string;
   };
@@ -103,14 +107,22 @@ export interface Dictionary {
     contactsLabel: string;
     copyrightTemplate: string;
   };
-  chat: {
+  demo: {
     title: string;
     subtitle: string;
-    greeting: string;
+    demoBadge: string;
+    demoNote: string;
+    assistantName: string;
+    status: string;
+    typing: string;
     placeholder: string;
-    openLabel: string;
-    closeLabel: string;
     sendLabel: string;
+    remainingTemplate: string;
     errorMessage: string;
+    rateLimitedMessage: string;
+    limitTitle: string;
+    limitCta: string;
+    restart: string;
+    scenarios: Record<'restaurant' | 'villa' | 'club', DemoScenarioCopy>;
   };
 }

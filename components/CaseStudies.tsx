@@ -8,14 +8,12 @@ export default function CaseStudies({
   dict,
   projectImages,
   videoAvailability,
-  whatsappHref,
   onOpenLightbox,
   onSelectPackage,
 }: {
   dict: Dictionary;
   projectImages: Record<string, SizedImage[]>;
   videoAvailability: Record<string, boolean>;
-  whatsappHref: string;
   onOpenLightbox: (id: string) => void;
   onSelectPackage: (packageName: string) => void;
 }) {
@@ -32,7 +30,6 @@ export default function CaseStudies({
               hasVideo={!!videoAvailability[project.id]}
               labels={dict.caseStudies.labels}
               galleryHint={dict.caseStudies.galleryHint}
-              whatsappHref={whatsappHref}
               onOpenLightbox={() => onOpenLightbox(project.id)}
               onSelectPackage={onSelectPackage}
             />

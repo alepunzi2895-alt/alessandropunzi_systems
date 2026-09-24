@@ -61,24 +61,14 @@ export default function ContactForm({
               <span className="font-medium text-sm">{dict.contact.whatsapp}</span>
             </a>
 
-            {BOOKING_CALL_URL ? (
-              <a
-                href={BOOKING_CALL_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-btn flex items-center gap-3 px-5 py-3 rounded-lg border border-green-600/40 bg-green-600/5 text-green-400 hover:border-green-600/80 hover:bg-green-600/10 flex-1"
-              >
-                <span className="font-medium text-sm">{dict.contact.bookCall}</span>
-              </a>
-            ) : (
-              <span
-                aria-disabled="true"
-                title={dict.contact.bookCallSoon}
-                className="flex items-center gap-3 px-5 py-3 rounded-lg border border-gray-700/40 bg-gray-800/10 text-gray-500 flex-1 cursor-not-allowed opacity-60"
-              >
-                <span className="font-medium text-sm">{dict.contact.bookCall}</span>
-              </span>
-            )}
+            <a
+              href={BOOKING_CALL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline flex items-center justify-center gap-3 px-5 py-3 rounded-lg border border-green-600/50 text-green-500 hover:text-white hover:bg-green-600/10 flex-1"
+            >
+              <span className="font-medium text-sm">{dict.contact.bookCall}</span>
+            </a>
           </div>
           <p className="text-xs text-gray-400 mono">{dict.contact.responsePromise}</p>
         </div>

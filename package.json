@@ -11,16 +11,15 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",
     "@libsql/client": "^0.14.0",
+    "@vercel/analytics": "^2.0.1",
     "lucide-react": "^0.468.0",
     "next": "15.3.6",
-    "qrcode": "^1.5.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "resend": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/qrcode": "^1.5.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.20",
