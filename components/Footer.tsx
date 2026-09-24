@@ -11,7 +11,7 @@ export default function Footer({ dict }: { dict: Dictionary }) {
   return (
     <footer className="border-t border-green-600/20 py-12 px-6 text-center text-gray-400 text-sm">
       <div className="flex justify-center mb-6">
-        <Image src="/favicon.png" alt="AP Systems" width={112} height={112} sizes="56px" className="w-14 h-14 object-contain opacity-80" />
+        <Image src="/favicon.png" alt="AP Systems" width={192} height={192} sizes="96px" className="w-24 h-24 object-contain opacity-80" />
       </div>
 
       <p className="mono text-xs uppercase tracking-widest text-gray-400 mb-3">{dict.footer.contactsLabel}</p>
