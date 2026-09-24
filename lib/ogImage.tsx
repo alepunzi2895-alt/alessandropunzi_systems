@@ -19,8 +19,8 @@ export async function renderOgImage(params: Promise<{ lang: string }>) {
           flexDirection: 'column',
           justifyContent: 'space-between',
           padding: '72px 80px',
-          background: 'radial-gradient(ellipse 70% 60% at 0% 0%, rgba(34,197,94,0.22) 0%, #000 65%)',
-          backgroundColor: '#000',
+          background: 'radial-gradient(ellipse 70% 60% at 0% 0%, rgba(34,197,94,0.22) 0%, #060d13 65%)',
+          backgroundColor: '#060d13',
           color: '#fff',
         }}
       >

@@ -7,7 +7,13 @@ const config: Config = {
     './*.tsx',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Same tone as the logo background (public/logo.png edges), so the logo
+        // blends into the page instead of sitting in a visible square.
+        black: '#060d13',
+      },
+    },
   },
   plugins: [],
 };

@@ -15,7 +15,7 @@ export default function Nav({ lang }: { lang: Lang }) {
     <nav className="sticky top-0 z-50 bg-black/85 backdrop-blur-md border-b border-green-600/20">
       <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <Image src="/logo.png" alt="AP Systems Logo" width={160} height={160} sizes="80px" priority className="w-20 h-20 object-contain" />
+          <Image src="/logo.png" alt="AP Systems Logo" width={160} height={160} sizes="80px" priority className="w-20 h-20 object-contain [mask-image:radial-gradient(circle_closest-side,black_78%,transparent_100%)]" />
           <div className="logo-text text-xl font-bold">AP Systems</div>
         </div>
         <div className="flex items-center gap-1 mono text-xs uppercase">
