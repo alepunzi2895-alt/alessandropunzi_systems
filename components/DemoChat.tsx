@@ -20,11 +20,11 @@ interface ChatMessage {
 
 type ErrorKind = 'generic' | 'rate_limited' | null;
 
-const emptyConversations = (): Record<DemoScenarioId, ChatMessage[]> => ({ restaurant: [], villa: [], club: [] });
+const emptyConversations = (): Record<DemoScenarioId, ChatMessage[]> => ({ properties: [], support: [], sales: [] });
 
 export default function DemoChat({ dict, lang }: { dict: Dictionary; lang: Lang }) {
   const t = dict.demo;
-  const [scenario, setScenario] = useState<DemoScenarioId>('restaurant');
+  const [scenario, setScenario] = useState<DemoScenarioId>('properties');
   const [conversations, setConversations] = useState(emptyConversations);
   // Session-wide count across all scenarios, so switching tab doesn't reset the limit.
   const [sentCount, setSentCount] = useState(0);
@@ -100,11 +100,11 @@ export default function DemoChat({ dict, lang }: { dict: Dictionary; lang: Lang 
   };
 
   return (
-    <section id="demo" className="py-20 px-6 border-t border-green-600/20 scroll-mt-20">
+    <div id="demo" className="scroll-mt-20 rounded-2xl border border-green-600/20 bg-green-950/5 px-4 py-10 md:px-10">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-10">
-          <h2 className="section-title text-5xl font-bold mb-4">{t.title}</h2>
-          <p className="text-gray-300 text-lg mt-6">{t.subtitle}</p>
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">{t.title}</h3>
+          <p className="text-gray-300 text-lg">{t.subtitle}</p>
         </div>
 
         {/* Scenario selector */}
@@ -262,7 +262,7 @@ export default function DemoChat({ dict, lang }: { dict: Dictionary; lang: Lang 
           </p>
         )}
       </div>
-    </section>
+    </div>
   );
 }
 

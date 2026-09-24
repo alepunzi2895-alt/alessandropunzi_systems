@@ -16,7 +16,7 @@ export default function Hero({ dict }: { dict: Dictionary }) {
           </div>
           <div className="flex flex-wrap gap-4 animate-fade-in delay-2">
             <a
-              href="#demo"
+              href="#contact"
               className="btn-primary px-8 py-3 bg-green-600 hover:bg-green-500 text-black font-semibold rounded"
             >
               {dict.hero.ctaPrimary}

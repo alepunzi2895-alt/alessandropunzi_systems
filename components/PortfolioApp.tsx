@@ -248,8 +248,6 @@ export default function PortfolioApp({
       <main>
         <Hero dict={c} />
 
-        <DemoChat dict={c} lang={lang} />
-
         <Offers dict={c} onSelectPackage={selectPackage} />
 
         <CaseStudies
@@ -258,6 +256,7 @@ export default function PortfolioApp({
           videoAvailability={videoAvailability}
           onOpenLightbox={(id) => setLightbox({ id, index: 0 })}
           onSelectPackage={selectPackage}
+          demo={<DemoChat dict={c} lang={lang} />}
         />
 
         <About dict={c} />

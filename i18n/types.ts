@@ -5,7 +5,6 @@ export interface OfferPackage {
   name: string;
   forWho: string;
   includes: string[];
-  priceLabel: string;
   cta: string;
 }
 
@@ -62,6 +61,7 @@ export interface Dictionary {
   };
   offers: {
     title: string;
+    subtitle: string;
     otherProject: string;
     freeDemo: string;
     freeDemoCta: string;
@@ -123,6 +123,6 @@ export interface Dictionary {
     limitTitle: string;
     limitCta: string;
     restart: string;
-    scenarios: Record<'restaurant' | 'villa' | 'club', DemoScenarioCopy>;
+    scenarios: Record<'properties' | 'support' | 'sales', DemoScenarioCopy>;
   };
 }
