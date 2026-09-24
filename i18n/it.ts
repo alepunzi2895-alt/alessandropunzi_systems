@@ -84,7 +84,7 @@ export const it: Dictionary = {
         problem: "I club ricevono ogni giorno le stesse domande su WhatsApp: orari, prezzi, lineup. A qualsiasi ora.",
         solution:
           'Un agente AI risponde in tempo reale con eventi, lineup e guest list per ogni club e ogni data, senza intervento manuale.',
-        result: '[[TODO: dato reale — es. messaggi gestiti al mese, tempo medio di risposta]]',
+        result: '',
         tech: ['Claude AI', 'WhatsApp', 'Real-time Data', 'Web Scraping'],
         ctas: [{ label: 'Prova la demo', action: 'demo' }],
       },
@@ -95,7 +95,7 @@ export const it: Dictionary = {
         problem: 'Property manager e concierge gestiscono prenotazioni, contabilità e ospiti su fogli sparsi.',
         solution:
           'Un gestionale unico per prenotazioni brevi e lunghe, contabilità, CRM ospiti e import automatico da Airbnb e Booking.',
-        result: '[[TODO: dato reale — es. tempo risparmiato a settimana, immobili gestiti]]',
+        result: '',
         tech: ['Vanilla JS', 'Turso / libSQL', 'Multi-tenant', 'i18n'],
         ctas: [{ label: 'Richiedi demo', action: 'contact', presetService: 'Gestionale su misura' }],
       },
@@ -106,7 +106,7 @@ export const it: Dictionary = {
         problem: 'Ville, yacht e auto di lusso gestiti a mano, tra WhatsApp, fogli Excel e telefonate.',
         solution:
           'Piattaforma di concierge con catalogo, prenotazioni guidate e dashboard multi-ruolo per admin, owner e concierge.',
-        result: '[[TODO: dato reale — es. prenotazioni gestite, ville attive sulla piattaforma]]',
+        result: '',
         tech: ['Next.js 14', 'Turso / libSQL', 'NextAuth', 'Leaflet'],
         ctas: [
           { label: 'Guarda su Instagram', action: 'external', url: 'https://instagram.com/_aura_ibiza_' },
