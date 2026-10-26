@@ -4,14 +4,14 @@ export const en: Dictionary = {
   meta: {
     title: 'AP Systems — AI agents, websites, custom management software and marketing',
     description:
-      'AI agents that answer your customers, websites that convert, custom management software and marketing, for companies and owners anywhere in the world. Monthly licence.',
+      'AI agents that answer your customers, websites that convert, custom management software and marketing, for companies and owners anywhere in the world.',
     ogLocale: 'en_US',
   },
   nav: { contact: 'Contact' },
   hero: {
     tag: 'AI AGENTS · WEBSITES · MANAGEMENT APPS · MARKETING',
-    headline: 'Your business answers its customers.',
-    headlineEmphasis: 'Even at 4 AM.',
+    headline: 'Customer support, always on.',
+    headlineEmphasis: '24 hours a day, in every time zone.',
     subtitle: 'AI agents, websites, custom management software and marketing for companies and owners who want customers, sites and properties under control, anywhere in the world.',
     ctaPrimary: 'Request a demo',
     ctaSecondary: 'See the solutions',
@@ -19,7 +19,7 @@ export const en: Dictionary = {
   offers: {
     title: 'Solutions',
     subtitle:
-      'Every solution is a service on a monthly licence, based on the number of users and integrations. We set the price together, on your real case.',
+      'We set the price together, based on your needs and the development required.',
     otherProject: 'Something different in mind? Get in touch.',
     freeDemo: 'Free demo on your own processes before you decide.',
     freeDemoCta: 'Book a call',

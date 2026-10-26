@@ -4,14 +4,14 @@ export const it: Dictionary = {
   meta: {
     title: 'AP Systems — Agenti AI, siti, gestionali su misura e marketing',
     description:
-      'Agenti AI che rispondono ai tuoi clienti, siti che convertono, gestionali su misura e marketing, per aziende e proprietari ovunque nel mondo. In licenza mensile.',
+      'Agenti AI che rispondono ai tuoi clienti, siti che convertono, gestionali su misura e marketing, per aziende e proprietari ovunque nel mondo.',
     ogLocale: 'it_IT',
   },
   nav: { contact: 'Contatti' },
   hero: {
     tag: 'AGENTI AI · SITI WEB · GESTIONALI · MARKETING',
-    headline: 'Il tuo business risponde ai clienti.',
-    headlineEmphasis: 'Anche alle 4 di notte.',
+    headline: 'Assistenza clienti sempre attiva.',
+    headlineEmphasis: '24 ore su 24, in ogni fuso orario.',
     subtitle: 'Agenti AI, siti, gestionali su misura e marketing per aziende e proprietari che vogliono clienti, sedi e immobili sotto controllo, ovunque nel mondo.',
     ctaPrimary: 'Richiedi una demo',
     ctaSecondary: 'Vedi le soluzioni',
@@ -19,7 +19,7 @@ export const it: Dictionary = {
   offers: {
     title: 'Soluzioni',
     subtitle:
-      'Ogni soluzione è un servizio in licenza mensile, calcolato sul numero di utenze e sulle integrazioni. Il prezzo lo definiamo insieme, sul tuo caso reale.',
+      'Il prezzo lo definiamo insieme, in base alle tue esigenze e agli sviluppi da fare.',
     otherProject: 'Esigenza diversa? Scrivimi.',
     freeDemo: 'Demo gratuita sui tuoi processi prima di decidere.',
     freeDemoCta: 'Prenota una call',
