@@ -1,8 +1,15 @@
 'use client';
 
-import { ChevronRight } from 'lucide-react';
+import { Bot, ChevronRight, Globe, LayoutDashboard, Megaphone, type LucideIcon } from 'lucide-react';
 import type { Dictionary } from '@/i18n';
 import { BOOKING_CALL_URL } from '@/lib/config';
+
+const PACKAGE_ICONS: Record<string, LucideIcon> = {
+  'ai-agent': Bot,
+  website: Globe,
+  management: LayoutDashboard,
+  marketing: Megaphone,
+};
 
 export default function Offers({
   dict,
@@ -20,12 +27,19 @@ export default function Offers({
         <h2 className="section-title text-5xl font-bold mb-8">{dict.offers.title}</h2>
         <p className="text-gray-300 text-lg max-w-3xl mb-16">{dict.offers.subtitle}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {dict.offers.packages.map((pkg, idx) => (
+          {dict.offers.packages.map((pkg, idx) => {
+            const Icon = PACKAGE_ICONS[pkg.id];
+            return (
             <div
               key={pkg.id}
               className="card-hover animate-fade-in flex flex-col p-8 rounded-lg border border-green-600/20 bg-green-950/5 hover:border-green-600/50"
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
+              {Icon && (
+                <div className="w-12 h-12 mb-5 rounded-lg border border-green-600/30 bg-green-600/10 flex items-center justify-center">
+                  <Icon className="w-6 h-6 text-green-500" aria-hidden="true" />
+                </div>
+              )}
               <h3 className="text-xl font-bold mb-2">{pkg.name}</h3>
               <p className="text-gray-400 text-sm mb-6">{pkg.forWho}</p>
               <div className="space-y-3 mb-6 flex-1">
@@ -44,7 +58,8 @@ export default function Offers({
                 {pkg.cta} <ChevronRight className="w-4 h-4" />
               </a>
             </div>
-          ))}
+            );
+          })}
         </div>
         <p className="text-gray-300 mt-10 flex flex-wrap items-center gap-x-3 gap-y-2">
           <span>{dict.offers.freeDemo}</span>
