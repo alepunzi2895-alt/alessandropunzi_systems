@@ -10,8 +10,8 @@ export const en: Dictionary = {
   nav: { contact: 'Contact' },
   hero: {
     tag: 'AI AGENTS · WEBSITES · MANAGEMENT APPS · MARKETING',
-    headline: 'Customer support, always on.',
-    headlineEmphasis: '24 hours a day, in every time zone.',
+    headline: 'AI agents that work for your business.',
+    headlineEmphasis: 'Customers, sites and properties under control, 24/7.',
     subtitle: 'AI agents, websites, custom management software and marketing for companies and owners who want customers, sites and properties under control, anywhere in the world.',
     ctaPrimary: 'Request a demo',
     ctaSecondary: 'See the solutions',
@@ -138,7 +138,7 @@ export const en: Dictionary = {
   about: {
     title: 'About Me',
     bio: [
-      "I'm Alessandro Punzi, a Data Architect. I design data and business intelligence systems for a multinational in the automotive sector: architectures that connect different systems, process large volumes of data and turn numbers into decisions for management.",
+      "I'm Alessandro Punzi, an AI Engineer and Data Architect. I design and build AI agents and data systems: architectures that connect different systems, process large volumes of data and turn numbers into decisions for management. Core skills: LLMs, AI agents, RAG, API integrations, process automation, data pipelines and business intelligence.",
       'With AP Systems I bring the same method to property owners and companies in every industry: control rooms that bring properties, sites and customers around the world under one roof, AI agents that handle customers for you, platforms that replace spreadsheets and disconnected systems.',
       "I follow every project from analysis to launch: one point of contact, clear timelines, no hand-offs between agencies. I work in Italian, English and Spanish.",
     ],

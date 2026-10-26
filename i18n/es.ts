@@ -10,8 +10,8 @@ export const es: Dictionary = {
   nav: { contact: 'Contacto' },
   hero: {
     tag: 'AGENTES IA · WEBS · SOFTWARE DE GESTIÓN · MARKETING',
-    headline: 'Tu negocio responde a sus clientes.',
-    headlineEmphasis: 'Incluso a las 4 de la madrugada.',
+    headline: 'Agentes de IA que trabajan para tu negocio.',
+    headlineEmphasis: 'Clientes, sedes e inmuebles bajo control, 24 horas al día.',
     subtitle: 'Agentes de IA, webs, software de gestión a medida y marketing para empresas y propietarios que quieren tener clientes, sedes e inmuebles bajo control, en cualquier parte del mundo.',
     ctaPrimary: 'Solicita una demo',
     ctaSecondary: 'Ver las soluciones',
@@ -138,7 +138,7 @@ export const es: Dictionary = {
   about: {
     title: 'Sobre mí',
     bio: [
-      "Soy Alessandro Punzi, Data Architect. Diseño sistemas de datos y business intelligence para una multinacional del sector automoción: arquitecturas que integran sistemas distintos, procesan grandes volúmenes de datos y convierten números en decisiones para la dirección.",
+      "Soy Alessandro Punzi, AI Engineer y Data Architect. Diseño y desarrollo agentes de IA y sistemas de datos: arquitecturas que integran sistemas distintos, procesan grandes volúmenes de datos y convierten números en decisiones para la dirección. Competencias clave: LLM, agentes de IA, RAG, integraciones por API, automatización de procesos, pipelines de datos y business intelligence.",
       'Con AP Systems aplico el mismo método a propietarios inmobiliarios y empresas de cualquier sector: centros de control que reúnen bajo una sola dirección inmuebles, sedes y clientes repartidos por el mundo, agentes de IA que gestionan a los clientes por ti, plataformas que sustituyen hojas de Excel y sistemas desconectados.',
       "Sigo cada proyecto desde el análisis hasta la puesta en marcha: un único interlocutor, plazos claros y sin intermediarios entre agencias. Trabajo en italiano, inglés y español.",
     ],

@@ -10,8 +10,8 @@ export const it: Dictionary = {
   nav: { contact: 'Contatti' },
   hero: {
     tag: 'AGENTI AI · SITI WEB · GESTIONALI · MARKETING',
-    headline: 'Assistenza clienti sempre attiva.',
-    headlineEmphasis: '24 ore su 24, in ogni fuso orario.',
+    headline: 'Agenti AI che lavorano per il tuo business.',
+    headlineEmphasis: 'Clienti, sedi e immobili sotto controllo, 24 ore su 24.',
     subtitle: 'Agenti AI, siti, gestionali su misura e marketing per aziende e proprietari che vogliono clienti, sedi e immobili sotto controllo, ovunque nel mondo.',
     ctaPrimary: 'Richiedi una demo',
     ctaSecondary: 'Vedi le soluzioni',
@@ -138,7 +138,7 @@ export const it: Dictionary = {
   about: {
     title: 'Chi sono',
     bio: [
-      "Sono Alessandro Punzi, Data Architect. Progetto sistemi dati e business intelligence per una multinazionale del settore automotive: architetture che integrano sistemi diversi, elaborano grandi volumi di dati e trasformano numeri in decisioni per il management.",
+      "Sono Alessandro Punzi, AI Engineer e Data Architect. Progetto e sviluppo agenti AI e sistemi dati: architetture che integrano sistemi diversi, elaborano grandi volumi di dati e trasformano numeri in decisioni per il management. Competenze chiave: LLM, agenti AI, RAG, integrazioni API, automazione dei processi, data pipeline e business intelligence.",
       "Con AP Systems porto lo stesso metodo a proprietari immobiliari e aziende di ogni settore: centri di controllo che riuniscono in un'unica regia immobili, sedi e clienti sparsi nel mondo, agenti AI che gestiscono i clienti al posto tuo, piattaforme che sostituiscono fogli Excel e sistemi scollegati.",
       "Seguo ogni progetto dall'analisi alla messa online: un solo referente, tempi chiari, nessun passaggio tra agenzie. Lavoro in italiano, inglese e spagnolo.",
     ],
