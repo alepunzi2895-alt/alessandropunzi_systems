@@ -11,7 +11,7 @@ export const en: Dictionary = {
   hero: {
     tag: 'AI AGENTS · WEBSITES · MANAGEMENT APPS · MARKETING',
     headline: 'AI agents that work for your business.',
-    headlineEmphasis: 'Customers, sites and properties under control, 24/7.',
+    headlineEmphasis: 'Everything under control, 24/7.',
     subtitle: 'AI agents, websites, custom management software and marketing for companies and owners who want customers, sites and properties under control, anywhere in the world.',
     ctaPrimary: 'Request a demo',
     ctaSecondary: 'See the solutions',

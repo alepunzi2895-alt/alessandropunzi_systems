@@ -11,7 +11,7 @@ export const es: Dictionary = {
   hero: {
     tag: 'AGENTES IA · WEBS · SOFTWARE DE GESTIÓN · MARKETING',
     headline: 'Agentes de IA que trabajan para tu negocio.',
-    headlineEmphasis: 'Clientes, sedes e inmuebles bajo control, 24 horas al día.',
+    headlineEmphasis: 'Todo bajo control, 24 horas al día.',
     subtitle: 'Agentes de IA, webs, software de gestión a medida y marketing para empresas y propietarios que quieren tener clientes, sedes e inmuebles bajo control, en cualquier parte del mundo.',
     ctaPrimary: 'Solicita una demo',
     ctaSecondary: 'Ver las soluciones',

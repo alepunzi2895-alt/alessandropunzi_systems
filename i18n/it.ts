@@ -11,7 +11,7 @@ export const it: Dictionary = {
   hero: {
     tag: 'AGENTI AI · SITI WEB · GESTIONALI · MARKETING',
     headline: 'Agenti AI che lavorano per il tuo business.',
-    headlineEmphasis: 'Clienti, sedi e immobili sotto controllo, 24 ore su 24.',
+    headlineEmphasis: 'Tutto sotto controllo 24 ore su 24.',
     subtitle: 'Agenti AI, siti, gestionali su misura e marketing per aziende e proprietari che vogliono clienti, sedi e immobili sotto controllo, ovunque nel mondo.',
     ctaPrimary: 'Richiedi una demo',
     ctaSecondary: 'Vedi le soluzioni',
